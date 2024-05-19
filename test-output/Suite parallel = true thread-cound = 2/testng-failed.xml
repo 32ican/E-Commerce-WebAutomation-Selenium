@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite parallel = true thread-cound = 2]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test2(failed)">
+    <classes>
+      <class name="testCases.TC003_ValidLoginTest">
+        <methods>
+          <include name="openUrl"/>
+          <include name="quitDriver"/>
+          <include name="LoginWithValidDataTest"/>
+        </methods>
+      </class> <!-- testCases.TC003_ValidLoginTest -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+</suite> <!-- Failed suite [Suite parallel = true thread-cound = 2] -->

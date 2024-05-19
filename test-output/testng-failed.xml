@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="tests" name="Smoke(failed)">
+    <groups>
+      <run>
+        <include name="Smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testCases.TC010_E2ETest">
+        <methods>
+          <include name="openUrl"/>
+          <include name="quitDriver"/>
+          <include name="E2ETest"/>
+        </methods>
+      </class> <!-- testCases.TC010_E2ETest -->
+      <class name="testCases.TC001_ValidRegisterTest">
+        <methods>
+          <include name="registerNewCustomerTest"/>
+          <include name="openUrl"/>
+          <include name="quitDriver"/>
+        </methods>
+      </class> <!-- testCases.TC001_ValidRegisterTest -->
+      <class name="testCases.TC006_AddingProductToCartTest">
+        <methods>
+          <include name="addBookToCartTest"/>
+          <include name="openUrl"/>
+          <include name="quitDriver"/>
+        </methods>
+      </class> <!-- testCases.TC006_AddingProductToCartTest -->
+    </classes>
+  </test> <!-- Smoke(failed) -->
+</suite> <!-- Failed suite [Suite] -->

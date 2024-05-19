@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-05-19T12:15:00 EEST" name="Suite" finished-at="2024-05-19T12:16:07 EEST" duration-ms="67002">
+    <groups>
+      <group name="Regression">
+        <method signature="TC002_InValidRegister.registerExsitingCustomerTest()[pri:0, instance:testCases.TC002_InValidRegister@3754a4bf]" name="registerExsitingCustomerTest" class="testCases.TC002_InValidRegister"/>
+        <method signature="TC004_InvalidPasswordLoginTest.LoginWithValidUserNameAndInvalidPasswordTest()[pri:0, instance:testCases.TC004_InvalidPasswordLoginTest@1d296da]" name="LoginWithValidUserNameAndInvalidPasswordTest" class="testCases.TC004_InvalidPasswordLoginTest"/>
+        <method signature="TC005_InvalidUserNameLoginTest.LoginWithValidUserNameAndInvalidPasswordTest()[pri:0, instance:testCases.TC005_InvalidUserNameLoginTest@7c7a06ec]" name="LoginWithValidUserNameAndInvalidPasswordTest" class="testCases.TC005_InvalidUserNameLoginTest"/>
+        <method signature="TC007_DicountCodeTest.addDiscountCodeTest()[pri:0, instance:testCases.TC007_DicountCodeTest@75d4a5c2]" name="addDiscountCodeTest" class="testCases.TC007_DicountCodeTest"/>
+        <method signature="TC008_TermsOfServiceTest.verifyMandatoryTermsOfServiceTest()[pri:0, instance:testCases.TC008_TermsOfServiceTest@557caf28]" name="verifyMandatoryTermsOfServiceTest" class="testCases.TC008_TermsOfServiceTest"/>
+        <method signature="TC009_BillingAdressMandatoryTest.verifyMandatoryTermsOfServiceTest()[pri:0, instance:testCases.TC009_BillingAdressMandatoryTest@408d971b]" name="verifyMandatoryTermsOfServiceTest" class="testCases.TC009_BillingAdressMandatoryTest"/>
+      </group> <!-- Regression -->
+    </groups>
+    <test started-at="2024-05-19T12:15:00 EEST" name="Smoke" finished-at="2024-05-19T12:15:00 EEST" duration-ms="230">
+    </test> <!-- Smoke -->
+    <test started-at="2024-05-19T12:15:00 EEST" name="Regression" finished-at="2024-05-19T12:16:07 EEST" duration-ms="67002">
+      <class name="testCases.TC007_DicountCodeTest">
+        <test-method is-config="true" signature="openUrl()[pri:0, instance:testCases.TC007_DicountCodeTest@75d4a5c2]" started-at="2024-05-19T12:15:43 EEST" name="openUrl" finished-at="2024-05-19T12:15:45 EEST" duration-ms="2223" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openUrl -->
+        <test-method signature="addDiscountCodeTest()[pri:0, instance:testCases.TC007_DicountCodeTest@75d4a5c2]" started-at="2024-05-19T12:15:45 EEST" name="addDiscountCodeTest" finished-at="2024-05-19T12:15:50 EEST" duration-ms="5064" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addDiscountCodeTest -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:testCases.TC007_DicountCodeTest@75d4a5c2]" started-at="2024-05-19T12:15:50 EEST" name="quitDriver" finished-at="2024-05-19T12:15:51 EEST" duration-ms="809" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+      </class> <!-- testCases.TC007_DicountCodeTest -->
+      <class name="testCases.TC009_BillingAdressMandatoryTest">
+        <test-method is-config="true" signature="openUrl()[pri:0, instance:testCases.TC009_BillingAdressMandatoryTest@408d971b]" started-at="2024-05-19T12:15:58 EEST" name="openUrl" finished-at="2024-05-19T12:16:00 EEST" duration-ms="2182" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openUrl -->
+        <test-method signature="verifyMandatoryTermsOfServiceTest()[pri:0, instance:testCases.TC009_BillingAdressMandatoryTest@408d971b]" started-at="2024-05-19T12:16:00 EEST" name="verifyMandatoryTermsOfServiceTest" finished-at="2024-05-19T12:16:06 EEST" duration-ms="5634" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMandatoryTermsOfServiceTest -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:testCases.TC009_BillingAdressMandatoryTest@408d971b]" started-at="2024-05-19T12:16:06 EEST" name="quitDriver" finished-at="2024-05-19T12:16:07 EEST" duration-ms="783" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+      </class> <!-- testCases.TC009_BillingAdressMandatoryTest -->
+      <class name="testCases.TC008_TermsOfServiceTest">
+        <test-method is-config="true" signature="openUrl()[pri:0, instance:testCases.TC008_TermsOfServiceTest@557caf28]" started-at="2024-05-19T12:15:51 EEST" name="openUrl" finished-at="2024-05-19T12:15:53 EEST" duration-ms="2476" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openUrl -->
+        <test-method signature="verifyMandatoryTermsOfServiceTest()[pri:0, instance:testCases.TC008_TermsOfServiceTest@557caf28]" started-at="2024-05-19T12:15:53 EEST" name="verifyMandatoryTermsOfServiceTest" finished-at="2024-05-19T12:15:58 EEST" duration-ms="4289" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMandatoryTermsOfServiceTest -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:testCases.TC008_TermsOfServiceTest@557caf28]" started-at="2024-05-19T12:15:58 EEST" name="quitDriver" finished-at="2024-05-19T12:15:58 EEST" duration-ms="731" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+      </class> <!-- testCases.TC008_TermsOfServiceTest -->
+      <class name="testCases.TC002_InValidRegister">
+        <test-method is-config="true" signature="openUrl()[pri:0, instance:testCases.TC002_InValidRegister@3754a4bf]" started-at="2024-05-19T12:15:00 EEST" name="openUrl" finished-at="2024-05-19T12:15:03 EEST" duration-ms="2519" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openUrl -->
+        <test-method signature="registerExsitingCustomerTest()[pri:0, instance:testCases.TC002_InValidRegister@3754a4bf]" started-at="2024-05-19T12:15:03 EEST" name="registerExsitingCustomerTest" finished-at="2024-05-19T12:15:04 EEST" duration-ms="1598" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerExsitingCustomerTest -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:testCases.TC002_InValidRegister@3754a4bf]" started-at="2024-05-19T12:15:04 EEST" name="quitDriver" finished-at="2024-05-19T12:15:14 EEST" duration-ms="10204" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+      </class> <!-- testCases.TC002_InValidRegister -->
+      <class name="testCases.TC004_InvalidPasswordLoginTest">
+        <test-method is-config="true" signature="openUrl()[pri:0, instance:testCases.TC004_InvalidPasswordLoginTest@1d296da]" started-at="2024-05-19T12:15:14 EEST" name="openUrl" finished-at="2024-05-19T12:15:17 EEST" duration-ms="2130" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openUrl -->
+        <test-method signature="LoginWithValidUserNameAndInvalidPasswordTest()[pri:0, instance:testCases.TC004_InvalidPasswordLoginTest@1d296da]" started-at="2024-05-19T12:15:17 EEST" name="LoginWithValidUserNameAndInvalidPasswordTest" finished-at="2024-05-19T12:15:17 EEST" duration-ms="920" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginWithValidUserNameAndInvalidPasswordTest -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:testCases.TC004_InvalidPasswordLoginTest@1d296da]" started-at="2024-05-19T12:15:17 EEST" name="quitDriver" finished-at="2024-05-19T12:15:29 EEST" duration-ms="11842" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+      </class> <!-- testCases.TC004_InvalidPasswordLoginTest -->
+      <class name="testCases.TC005_InvalidUserNameLoginTest">
+        <test-method is-config="true" signature="openUrl()[pri:0, instance:testCases.TC005_InvalidUserNameLoginTest@7c7a06ec]" started-at="2024-05-19T12:15:29 EEST" name="openUrl" finished-at="2024-05-19T12:15:31 EEST" duration-ms="1526" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openUrl -->
+        <test-method signature="LoginWithValidUserNameAndInvalidPasswordTest()[pri:0, instance:testCases.TC005_InvalidUserNameLoginTest@7c7a06ec]" started-at="2024-05-19T12:15:31 EEST" name="LoginWithValidUserNameAndInvalidPasswordTest" finished-at="2024-05-19T12:15:32 EEST" duration-ms="1576" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginWithValidUserNameAndInvalidPasswordTest -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:testCases.TC005_InvalidUserNameLoginTest@7c7a06ec]" started-at="2024-05-19T12:15:32 EEST" name="quitDriver" finished-at="2024-05-19T12:15:43 EEST" duration-ms="10223" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+      </class> <!-- testCases.TC005_InvalidUserNameLoginTest -->
+    </test> <!-- Regression -->
+  </suite> <!-- Suite -->
+</testng-results>
