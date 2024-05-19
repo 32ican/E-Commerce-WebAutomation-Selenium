@@ -3,6 +3,8 @@ package utils;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+import org.testng.ITestContext;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
@@ -15,14 +17,14 @@ public class ExtentManager {
 	private static ExtentReports extentReport;
 	private static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
 
-	public synchronized static ExtentReports getReport() {
+	public static ExtentReports getReport() {
 		if (extentReport == null) {
 			setUpReport("Automation Project");
 		}
 		return extentReport;
 	}
 
-	public synchronized static  ExtentReports setUpReport(String name) {
+	public static ExtentReports setUpReport(String name) {
 		extentReport = new ExtentReports();
 		String dateTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
 		String path = System.getProperty("user.dir") + "\\test-output\\reports\\" + name + "_" + dateTime + ".html";
@@ -35,37 +37,63 @@ public class ExtentManager {
 		return extentReport;
 	}
 
-	public synchronized static void flushReport() {
+	public static void flushReport() {
 		extentReport.flush();
 	}
 
-	public synchronized static ExtentTest getTest() {
+	public static ExtentTest getTest() {
+	
 		return extentTest.get();
 	}
 
-	public synchronized static ExtentTest createTest(String name, String description) {
+	public static ExtentTest createTest(String name, String description) {
 		ExtentTest test = extentReport.createTest(name);
 		extentTest.set(test);
-		return getTest();
+		return extentTest.get();
+
 	}
 
-	public synchronized static void log(String message) {
-		getTest().info(message);
+	public static void log(String message) {
+		ExtentTest test = getTest();
+		if (test != null) {
+			test.info(message);
+		} else {
+			System.err.println("ExtentTest is null. Cannot log message: " + message);
+		}
 	}
 
-	public synchronized static void pass(String message) {
-		getTest().pass(message);
+	public static void pass(String message) {
+		ExtentTest test = getTest();
+		if (test != null) {
+			test.pass(message);
+		} else {
+			System.err.println("ExtentTest is null. Cannot log pass message: " + message);
+		}
 	}
 
-	public synchronized static void fail(String message) {
-		getTest().fail(message);
+	public static void fail(String message) {
+		ExtentTest test = getTest();
+		if (test != null) {
+			test.fail(message);
+		} else {
+			System.err.println("ExtentTest is null. Cannot log fail message: " + message);
+		}
 	}
 
-	public synchronized static void attachImage() {
+	public static void attachImage() {
 		BaseClass base = new BaseClass();
 		String screenshotPath = base.getScreenShotPath();
-		getTest().addScreenCaptureFromPath(screenshotPath);
-		System.out.println("Screenshot added........");
+		ExtentTest test = getTest();
+		if (test != null) {
+			try {
+				test.addScreenCaptureFromPath(screenshotPath);
+				System.out.println("Screenshot added........");
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} else {
+			System.err.println("ExtentTest is null. Cannot attach image.");
+		}
 	}
 
 }

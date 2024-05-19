@@ -14,7 +14,7 @@ public class WebDriverFactory {
 
 	
 	
-	public static WebDriver getDriver() {
+	public synchronized static WebDriver getDriver() {
 
 		if (driverT.get() == null) {
 			driverT.set(createDriver());
@@ -53,9 +53,12 @@ public class WebDriverFactory {
 	}
 
 	
-	public static void cleanupDriver() {
-		driverT.get().quit();
-		driverT.remove();
+	public synchronized static void cleanupDriver() {
+		if (driverT.get() !=null) {
+			driverT.get().quit();
+			driverT.remove();
+		}
+		
 	}
 
 }

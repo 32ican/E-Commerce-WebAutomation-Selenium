@@ -9,18 +9,47 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Smoke</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">230</td><td>Regression</td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">Regression</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">67,002</td><td>Regression</td><td></td></tr>
-<tr><th>Total</th><th class="num">6</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num">67,232</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">Smoke</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">14,498</td><td>Regression, Smoke</td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Regression</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">12,895</td><td>Regression, Smoke</td><td></td></tr>
+<tr><th>Total</th><th class="num">7</th><th class="num">0</th><th class="num">0</th><th class="num attn">1</th><th class="num">27,393</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4" class="invisible"/></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">Regression &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testCases.TC002_InValidRegister</td><td><a href="#m0">registerExsitingCustomerTest</a></td><td rowspan="1">1716110103116</td><td rowspan="1">1598</td></tr><tr class="passedodd"><td rowspan="1">testCases.TC004_InvalidPasswordLoginTest</td><td><a href="#m1">LoginWithValidUserNameAndInvalidPasswordTest</a></td><td rowspan="1">1716110117055</td><td rowspan="1">920</td></tr><tr class="passedeven"><td rowspan="1">testCases.TC005_InvalidUserNameLoginTest</td><td><a href="#m2">LoginWithValidUserNameAndInvalidPasswordTest</a></td><td rowspan="1">1716110131347</td><td rowspan="1">1576</td></tr><tr class="passedodd"><td rowspan="1">testCases.TC007_DicountCodeTest</td><td><a href="#m3">addDiscountCodeTest</a></td><td rowspan="1">1716110145372</td><td rowspan="1">5064</td></tr><tr class="passedeven"><td rowspan="1">testCases.TC008_TermsOfServiceTest</td><td><a href="#m4">verifyMandatoryTermsOfServiceTest</a></td><td rowspan="1">1716110153723</td><td rowspan="1">4289</td></tr><tr class="passedodd"><td rowspan="1">testCases.TC009_BillingAdressMandatoryTest</td><td><a href="#m5">verifyMandatoryTermsOfServiceTest</a></td><td rowspan="1">1716110160925</td><td rowspan="1">5634</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Smoke &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testCases.TC001_ValidRegisterTest</td><td><a href="#m0">registerNewCustomerTest</a></td><td rowspan="1">1716132196281</td><td rowspan="1">11294</td></tr><tr><th colspan="4">Smoke &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testCases.TC006_AddingProductToCartTest</td><td><a href="#m1">addBookToCartTest</a></td><td rowspan="1">1716132197249</td><td rowspan="1">3274</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Regression &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testCases.TC002_InValidRegister</td><td><a href="#m2">registerExsitingCustomerTest</a></td><td rowspan="1">1716132209638</td><td rowspan="1">2716</td></tr><tr class="passedodd"><td rowspan="1">testCases.TC003_ValidLoginTest</td><td><a href="#m3">loginWithValidDataTest</a></td><td rowspan="1">1716132211493</td><td rowspan="1">2548</td></tr><tr class="passedeven"><td rowspan="1">testCases.TC004_InvalidPasswordLoginTest</td><td><a href="#m4">LoginWithValidUserNameAndInvalidPasswordTest</a></td><td rowspan="1">1716132211263</td><td rowspan="1">928</td></tr><tr class="passedodd"><td rowspan="1">testCases.TC005_InvalidUserNameLoginTest</td><td><a href="#m5">LoginWithValidUserNameAndInvalidPasswordTest</a></td><td rowspan="1">1716132214499</td><td rowspan="1">1429</td></tr><tr class="passedeven"><td rowspan="1">testCases.TC007_DicountCodeTest</td><td><a href="#m6">addDiscountCodeTest</a></td><td rowspan="1">1716132215641</td><td rowspan="1">4118</td></tr><tr class="passedodd"><td rowspan="1">testCases.TC008_TermsOfServiceTest</td><td><a href="#m7">verifyMandatoryTermsOfServiceTest</a></td><td rowspan="1">1716132216601</td><td rowspan="1">4317</td></tr></tbody>
 </table>
-<h2>Smoke</h2><h2>Regression</h2><h3 id="m0">testCases.TC002_InValidRegister#registerExsitingCustomerTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">testCases.TC004_InvalidPasswordLoginTest#LoginWithValidUserNameAndInvalidPasswordTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">testCases.TC005_InvalidUserNameLoginTest#LoginWithValidUserNameAndInvalidPasswordTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">testCases.TC007_DicountCodeTest#addDiscountCodeTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">testCases.TC008_TermsOfServiceTest#verifyMandatoryTermsOfServiceTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">testCases.TC009_BillingAdressMandatoryTest#verifyMandatoryTermsOfServiceTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Smoke</h2><h3 id="m0">testCases.TC001_ValidRegisterTest#registerNewCustomerTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.result&quot;}
+  (Session info: chrome=124.0.6367.209)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c01531d17b81623bb02f8e7f223f7127, findElement {value=.result, using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.209, chrome: {chromedriverVersion: 124.0.6367.207 (a9001a6e39f..., userDataDir: C:\Users\Mofid\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61562}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61562/devtoo..., se:cdpVersion: 124.0.6367.209, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c01531d17b81623bb02f8e7f223f7127
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at pages.RegisterResultPage.getSuccessfulRegisterMsg(RegisterResultPage.java:23)
+	at testCases.TC001_ValidRegisterTest.registerNewCustomerTest(TC001_ValidRegisterTest.java:39)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testCases.TC006_AddingProductToCartTest#addBookToCartTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Regression</h2><h3 id="m2">testCases.TC002_InValidRegister#registerExsitingCustomerTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">testCases.TC003_ValidLoginTest#loginWithValidDataTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">testCases.TC004_InvalidPasswordLoginTest#LoginWithValidUserNameAndInvalidPasswordTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">testCases.TC005_InvalidUserNameLoginTest#LoginWithValidUserNameAndInvalidPasswordTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">testCases.TC007_DicountCodeTest#addDiscountCodeTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">testCases.TC008_TermsOfServiceTest#verifyMandatoryTermsOfServiceTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

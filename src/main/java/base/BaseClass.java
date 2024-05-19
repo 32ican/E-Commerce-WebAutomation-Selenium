@@ -16,47 +16,30 @@ import org.testng.annotations.Listeners;
 import org.apache.commons.io.FileUtils;
 
 @Listeners(utils.Listeners.class)
-
 public class BaseClass {
 
-//	private final String configFilePath = System.getProperty("user.dir") + "\\src\\main\\resources\\config.properties";
-//	private static String  screenshotPath;
-	
-    private static final String CONFIG_FILE_PATH = System.getProperty("user.dir") + "\\src\\main\\resources\\config.properties";
-    private static final ThreadLocal<Properties> properties = ThreadLocal.withInitial(() -> loadProperties(CONFIG_FILE_PATH));
-    private static final ThreadLocal<String> SCREENSHOT_PATH = new ThreadLocal<>();
+	private final String CONFIG_PATH = System.getProperty("user.dir") + "\\src\\main\\resources\\config.properties";
+	private static String  screenshotPath;
 
 	// public WebDriver driver = getDriver();
-	public static WebDriver getDriver() {
-
+	public synchronized static WebDriver getDriver() {
 		return WebDriverFactory.getDriver();
 	}
 
 	public String getProperty(String key) {
 
-//		Properties prop = new Properties();
-//		try {
-//			prop.load(new FileInputStream(CONFIG_FILE_PATH));
-//			
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+		Properties prop = new Properties();
+		try {
+			prop.load(new FileInputStream(CONFIG_PATH));
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
-		return properties.get().getProperty(key);
+		return prop.getProperty(key);
 
 	}
-	
-
-    private static Properties loadProperties(String filePath) {
-        Properties prop = new Properties();
-        try (FileInputStream inputStream = new FileInputStream(filePath)) {
-            prop.load(inputStream);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return prop;
-    }
 
 	public void takeScreenShot(String name) {
 		String dateTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
@@ -76,10 +59,10 @@ public class BaseClass {
 	}
 
 	public String getScreenShotPath() {
-		return SCREENSHOT_PATH.get();
+		return screenshotPath;
 	}
 
 	public void setScreenshotPath(String path) {
-		SCREENSHOT_PATH.set(path);
+		screenshotPath = path;
 	}
 }

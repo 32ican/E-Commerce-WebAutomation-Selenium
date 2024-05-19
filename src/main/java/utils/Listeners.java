@@ -6,11 +6,20 @@ import org.testng.ITestResult;
 
 import base.BaseClass;
 
-
 public class Listeners implements ITestListener {
 
 	private BaseClass base = new BaseClass();
-	
+
+	public synchronized void onStart(ITestContext context) {
+		ExtentManager.getReport();
+	}
+
+	@Override
+	public synchronized void onTestStart(ITestResult result) {
+		ExtentManager.createTest(result.getMethod().getMethodName(), result.getMethod().getDescription());
+	}
+
+	@Override
 	public synchronized void onTestFailure(ITestResult result) {
 		ExtentManager.getTest().fail(result.getThrowable());
 		try {
@@ -20,16 +29,16 @@ public class Listeners implements ITestListener {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 	}
 
-	public synchronized void onStart(ITestContext context) {
-		ExtentManager.getReport();
-		ExtentManager.createTest(context.getName(), context.getName());
-
+	@Override
+	public synchronized void onTestSuccess(ITestResult result) {
+		ExtentManager.getTest().pass("Test passed: " + result.getName());
 	}
 
+	@Override
 	public synchronized void onFinish(ITestContext context) {
 		ExtentManager.flushReport();
 	}
+
 }

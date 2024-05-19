@@ -6,9 +6,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 
 import pages.BooksPage;
 import pages.CartPage;
@@ -21,26 +20,29 @@ import utils.WebDriverFactory;
 public class Hooks extends BaseClass {
 
 	@BeforeClass(alwaysRun = true)
-	public void openUrl() {
+	public void setUp() {
 		getDriver().get(getProperty("url"));
 	}
 
-	@AfterClass(alwaysRun = true)
-	public void quitDriver() {
+	@AfterMethod
+	public void logOUt() {
 		// logout and quit the browser
 		try {
 			HomePage home = new HomePage(getDriver());
 			home.getLogOutBtn().click();
-
 		} catch (Exception e) {
 			e.getStackTrace();
 		}
 		getDriver().close();
+	}
+
+	@AfterClass(alwaysRun = true)
+	public void tearDown() {
 		WebDriverFactory.cleanupDriver();
 	}
 
 	public void login(String email, String password) {
-		 ExtentManager.log("logging in ...");
+		ExtentManager.log("logging in ...");
 		HomePage homePage = new HomePage(getDriver());
 		homePage.getLoginBtn().click();
 		LoginPage loginPage = new LoginPage(getDriver());
