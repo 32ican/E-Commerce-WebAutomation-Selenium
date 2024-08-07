@@ -6,12 +6,13 @@ import org.testng.annotations.Test;
 import base.Hooks;
 import org.testng.Assert;
 import pages.ProductsPage;
+import utils.ConfigLoader;
 
 public class TC006_AddingProductToCartTest extends Hooks {
 
-	private String email = getProperty("email");
-	private String password = getProperty("password");
-	private String expectedMsg = getProperty("CartConfirmationMsg");
+	private String email = ConfigLoader.getProperty("email");
+	private String password = ConfigLoader.getProperty("password");
+	private String expectedMsg = ConfigLoader.getProperty("CartConfirmationMsg");
 
 	@Test(groups = {"Smoke"})
 	public void addBookToCartTest() {

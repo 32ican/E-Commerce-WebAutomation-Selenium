@@ -25,8 +25,7 @@ public class WebDriverFactory {
 
 	public static WebDriver createDriver() {
 		WebDriver driver;
-		BaseClass base = new BaseClass();
-		String browser = base.getProperty("browser");
+		String browser = ConfigLoader.getProperty("browser");
 		
 		switch (browser.toLowerCase()) {
 		case "chrome":

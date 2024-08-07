@@ -1,69 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
+<testng-results ignored="0" total="10" passed="9" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-19T18:23:13 EEST" name="Suite" finished-at="2024-05-19T18:23:41 EEST" duration-ms="27667">
+  <suite started-at="2024-08-08T00:56:03 EEST" name="Suite" finished-at="2024-08-08T00:56:50 EEST" duration-ms="47011">
     <groups>
       <group name="Regression">
-        <method signature="TC002_InValidRegister.registerExsitingCustomerTest()[pri:0, instance:testCases.TC002_InValidRegister@61322f9d]" name="registerExsitingCustomerTest" class="testCases.TC002_InValidRegister"/>
-        <method signature="TC004_InvalidPasswordLoginTest.LoginWithValidUserNameAndInvalidPasswordTest()[pri:0, instance:testCases.TC004_InvalidPasswordLoginTest@510f3d34]" name="LoginWithValidUserNameAndInvalidPasswordTest" class="testCases.TC004_InvalidPasswordLoginTest"/>
-        <method signature="TC005_InvalidUserNameLoginTest.LoginWithValidUserNameAndInvalidPasswordTest()[pri:0, instance:testCases.TC005_InvalidUserNameLoginTest@7817fd62]" name="LoginWithValidUserNameAndInvalidPasswordTest" class="testCases.TC005_InvalidUserNameLoginTest"/>
-        <method signature="TC007_DicountCodeTest.addDiscountCodeTest()[pri:0, instance:testCases.TC007_DicountCodeTest@8297b3a]" name="addDiscountCodeTest" class="testCases.TC007_DicountCodeTest"/>
-        <method signature="TC008_TermsOfServiceTest.verifyMandatoryTermsOfServiceTest()[pri:0, instance:testCases.TC008_TermsOfServiceTest@2362f559]" name="verifyMandatoryTermsOfServiceTest" class="testCases.TC008_TermsOfServiceTest"/>
+        <method signature="TC002_InValidRegister.registerExsitingCustomerTest()[pri:0, instance:testCases.TC002_InValidRegister@2362f559]" name="registerExsitingCustomerTest" class="testCases.TC002_InValidRegister"/>
+        <method signature="TC004_InvalidPasswordLoginTest.LoginWithValidUserNameAndInvalidPasswordTest()[pri:0, instance:testCases.TC004_InvalidPasswordLoginTest@b2c9a9c]" name="LoginWithValidUserNameAndInvalidPasswordTest" class="testCases.TC004_InvalidPasswordLoginTest"/>
+        <method signature="TC005_InvalidUserNameLoginTest.LoginWithValidUserNameAndInvalidPasswordTest()[pri:0, instance:testCases.TC005_InvalidUserNameLoginTest@4c178a76]" name="LoginWithValidUserNameAndInvalidPasswordTest" class="testCases.TC005_InvalidUserNameLoginTest"/>
+        <method signature="TC007_DicountCodeTest.addDiscountCodeTest()[pri:0, instance:testCases.TC007_DicountCodeTest@fa4c865]" name="addDiscountCodeTest" class="testCases.TC007_DicountCodeTest"/>
+        <method signature="TC008_TermsOfServiceTest.verifyMandatoryTermsOfServiceTest()[pri:0, instance:testCases.TC008_TermsOfServiceTest@3bd82cf5]" name="verifyMandatoryTermsOfServiceTest" class="testCases.TC008_TermsOfServiceTest"/>
+        <method signature="TC009_BillingAdressMandatoryTest.verifyMandatoryTermsOfServiceTest()[pri:0, instance:testCases.TC009_BillingAdressMandatoryTest@544fa968]" name="verifyMandatoryTermsOfServiceTest" class="testCases.TC009_BillingAdressMandatoryTest"/>
       </group> <!-- Regression -->
       <group name="Smoke">
-        <method signature="TC001_ValidRegisterTest.registerNewCustomerTest()[pri:0, instance:testCases.TC001_ValidRegisterTest@51399530]" name="registerNewCustomerTest" class="testCases.TC001_ValidRegisterTest"/>
-        <method signature="TC006_AddingProductToCartTest.addBookToCartTest()[pri:0, instance:testCases.TC006_AddingProductToCartTest@6c6cb480]" name="addBookToCartTest" class="testCases.TC006_AddingProductToCartTest"/>
-        <method signature="TC003_ValidLoginTest.loginWithValidDataTest()[pri:0, instance:testCases.TC003_ValidLoginTest@6ad82709]" name="loginWithValidDataTest" class="testCases.TC003_ValidLoginTest"/>
+        <method signature="TC001_ValidRegisterTest.registerNewCustomerTest()[pri:0, instance:testCases.TC001_ValidRegisterTest@36fc695d]" name="registerNewCustomerTest" class="testCases.TC001_ValidRegisterTest"/>
+        <method signature="TC003_ValidLoginTest.loginWithValidDataTest()[pri:0, instance:testCases.TC003_ValidLoginTest@292b08d6]" name="loginWithValidDataTest" class="testCases.TC003_ValidLoginTest"/>
+        <method signature="TC006_AddingProductToCartTest.addBookToCartTest()[pri:0, instance:testCases.TC006_AddingProductToCartTest@22555ebf]" name="addBookToCartTest" class="testCases.TC006_AddingProductToCartTest"/>
+        <method signature="TC010_E2ETest.E2ETest()[pri:0, instance:testCases.TC010_E2ETest@36ebc363]" name="E2ETest" class="testCases.TC010_E2ETest"/>
       </group> <!-- Smoke -->
     </groups>
-    <test started-at="2024-05-19T18:23:13 EEST" name="Smoke" finished-at="2024-05-19T18:23:27 EEST" duration-ms="14498">
-      <class name="testCases.TC001_ValidRegisterTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.TC001_ValidRegisterTest@51399530]" started-at="2024-05-19T18:23:13 EEST" name="setUp" finished-at="2024-05-19T18:23:16 EEST" duration-ms="2648" status="PASS">
+    <test started-at="2024-08-08T00:56:03 EEST" name="Smoke" finished-at="2024-08-08T00:56:20 EEST" duration-ms="17628">
+      <class name="testCases.TC003_ValidLoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.TC003_ValidLoginTest@292b08d6]" started-at="2024-08-08T00:56:03 EEST" name="setUp" finished-at="2024-08-08T00:56:06 EEST" duration-ms="3393" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="registerNewCustomerTest()[pri:0, instance:testCases.TC001_ValidRegisterTest@51399530]" started-at="2024-05-19T18:23:16 EEST" name="registerNewCustomerTest" finished-at="2024-05-19T18:23:27 EEST" duration-ms="11294" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="loginWithValidDataTest()[pri:0, instance:testCases.TC003_ValidLoginTest@292b08d6]" started-at="2024-08-08T00:56:06 EEST" name="loginWithValidDataTest" finished-at="2024-08-08T00:56:07 EEST" duration-ms="1065" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithValidDataTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC003_ValidLoginTest@292b08d6]" started-at="2024-08-08T00:56:07 EEST" name="tearDown" finished-at="2024-08-08T00:56:08 EEST" duration-ms="679" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC003_ValidLoginTest -->
+      <class name="testCases.TC001_ValidRegisterTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.TC001_ValidRegisterTest@36fc695d]" started-at="2024-08-08T00:56:03 EEST" name="setUp" finished-at="2024-08-08T00:56:06 EEST" duration-ms="2596" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="registerNewCustomerTest()[pri:0, instance:testCases.TC001_ValidRegisterTest@36fc695d]" started-at="2024-08-08T00:56:06 EEST" name="registerNewCustomerTest" finished-at="2024-08-08T00:56:07 EEST" duration-ms="1413" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerNewCustomerTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC001_ValidRegisterTest@36fc695d]" started-at="2024-08-08T00:56:07 EEST" name="tearDown" finished-at="2024-08-08T00:56:07 EEST" duration-ms="123" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC001_ValidRegisterTest -->
+      <class name="testCases.TC006_AddingProductToCartTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.TC006_AddingProductToCartTest@22555ebf]" started-at="2024-08-08T00:56:07 EEST" name="setUp" finished-at="2024-08-08T00:56:09 EEST" duration-ms="2069" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="addBookToCartTest()[pri:0, instance:testCases.TC006_AddingProductToCartTest@22555ebf]" started-at="2024-08-08T00:56:09 EEST" name="addBookToCartTest" finished-at="2024-08-08T00:56:12 EEST" duration-ms="3054" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBookToCartTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC006_AddingProductToCartTest@22555ebf]" started-at="2024-08-08T00:56:12 EEST" name="tearDown" finished-at="2024-08-08T00:56:12 EEST" duration-ms="116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC006_AddingProductToCartTest -->
+      <class name="testCases.TC010_E2ETest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.TC010_E2ETest@36ebc363]" started-at="2024-08-08T00:56:08 EEST" name="setUp" finished-at="2024-08-08T00:56:10 EEST" duration-ms="2133" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="E2ETest()[pri:0, instance:testCases.TC010_E2ETest@36ebc363]" started-at="2024-08-08T00:56:10 EEST" name="E2ETest" finished-at="2024-08-08T00:56:20 EEST" duration-ms="10041" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- E2ETest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC010_E2ETest@36ebc363]" started-at="2024-08-08T00:56:20 EEST" name="tearDown" finished-at="2024-08-08T00:56:20 EEST" duration-ms="131" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC010_E2ETest -->
+    </test> <!-- Smoke -->
+    <test started-at="2024-08-08T00:56:21 EEST" name="Regression" finished-at="2024-08-08T00:56:50 EEST" duration-ms="29092">
+      <class name="testCases.TC007_DicountCodeTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.TC007_DicountCodeTest@fa4c865]" started-at="2024-08-08T00:56:25 EEST" name="setUp" finished-at="2024-08-08T00:56:28 EEST" duration-ms="2509" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="addDiscountCodeTest()[pri:0, instance:testCases.TC007_DicountCodeTest@fa4c865]" started-at="2024-08-08T00:56:28 EEST" name="addDiscountCodeTest" finished-at="2024-08-08T00:56:33 EEST" duration-ms="4969" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addDiscountCodeTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC007_DicountCodeTest@fa4c865]" started-at="2024-08-08T00:56:33 EEST" name="tearDown" finished-at="2024-08-08T00:56:33 EEST" duration-ms="92" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC007_DicountCodeTest -->
+      <class name="testCases.TC009_BillingAdressMandatoryTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.TC009_BillingAdressMandatoryTest@544fa968]" started-at="2024-08-08T00:56:33 EEST" name="setUp" finished-at="2024-08-08T00:56:35 EEST" duration-ms="2180" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyMandatoryTermsOfServiceTest()[pri:0, instance:testCases.TC009_BillingAdressMandatoryTest@544fa968]" started-at="2024-08-08T00:56:35 EEST" name="verifyMandatoryTermsOfServiceTest" finished-at="2024-08-08T00:56:50 EEST" duration-ms="14651" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":".result"}
-  (Session info: chrome=124.0.6367.209)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.20.0', revision: '866c76ca80'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c01531d17b81623bb02f8e7f223f7127, findElement {value=.result, using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.209, chrome: {chromedriverVersion: 124.0.6367.207 (a9001a6e39f..., userDataDir: C:\Users\Mofid\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61562}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61562/devtoo..., se:cdpVersion: 124.0.6367.209, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c01531d17b81623bb02f8e7f223f7127]]>
+              <![CDATA[lists don't have the same size expected [0] but found [5]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".result"}
-  (Session info: chrome=124.0.6367.209)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.20.0', revision: '866c76ca80'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c01531d17b81623bb02f8e7f223f7127, findElement {value=.result, using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.209, chrome: {chromedriverVersion: 124.0.6367.207 (a9001a6e39f..., userDataDir: C:\Users\Mofid\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61562}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61562/devtoo..., se:cdpVersion: 124.0.6367.209, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c01531d17b81623bb02f8e7f223f7127
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-at pages.RegisterResultPage.getSuccessfulRegisterMsg(RegisterResultPage.java:23)
-at testCases.TC001_ValidRegisterTest.registerNewCustomerTest(TC001_ValidRegisterTest.java:39)
+              <![CDATA[java.lang.AssertionError: lists don't have the same size expected [0] but found [5]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at org.testng.Assert.assertEquals(Assert.java:1630)
+at org.testng.Assert.assertEquals(Assert.java:1606)
+at testCases.TC009_BillingAdressMandatoryTest.verifyMandatoryTermsOfServiceTest(TC009_BillingAdressMandatoryTest.java:46)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -84,111 +133,67 @@ at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecut
 at java.base/java.lang.Thread.run(Thread.java:842)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerNewCustomerTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC001_ValidRegisterTest@51399530]" started-at="2024-05-19T18:23:27 EEST" name="tearDown" finished-at="2024-05-19T18:23:27 EEST" duration-ms="158" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testCases.TC001_ValidRegisterTest -->
-      <class name="testCases.TC006_AddingProductToCartTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.TC006_AddingProductToCartTest@6c6cb480]" started-at="2024-05-19T18:23:13 EEST" name="setUp" finished-at="2024-05-19T18:23:17 EEST" duration-ms="3625" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="addBookToCartTest()[pri:0, instance:testCases.TC006_AddingProductToCartTest@6c6cb480]" started-at="2024-05-19T18:23:17 EEST" name="addBookToCartTest" finished-at="2024-05-19T18:23:20 EEST" duration-ms="3274" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addBookToCartTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC006_AddingProductToCartTest@6c6cb480]" started-at="2024-05-19T18:23:20 EEST" name="tearDown" finished-at="2024-05-19T18:23:20 EEST" duration-ms="132" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testCases.TC006_AddingProductToCartTest -->
-    </test> <!-- Smoke -->
-    <test started-at="2024-05-19T18:23:28 EEST" name="Regression" finished-at="2024-05-19T18:23:41 EEST" duration-ms="12895">
-      <class name="testCases.TC003_ValidLoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.TC003_ValidLoginTest@6ad82709]" started-at="2024-05-19T18:23:28 EEST" name="setUp" finished-at="2024-05-19T18:23:31 EEST" duration-ms="3326" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="loginWithValidDataTest()[pri:0, instance:testCases.TC003_ValidLoginTest@6ad82709]" started-at="2024-05-19T18:23:31 EEST" name="loginWithValidDataTest" finished-at="2024-05-19T18:23:34 EEST" duration-ms="2548" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithValidDataTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC003_ValidLoginTest@6ad82709]" started-at="2024-05-19T18:23:34 EEST" name="tearDown" finished-at="2024-05-19T18:23:34 EEST" duration-ms="470" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testCases.TC003_ValidLoginTest -->
-      <class name="testCases.TC007_DicountCodeTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.TC007_DicountCodeTest@8297b3a]" started-at="2024-05-19T18:23:33 EEST" name="setUp" finished-at="2024-05-19T18:23:35 EEST" duration-ms="2234" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="addDiscountCodeTest()[pri:0, instance:testCases.TC007_DicountCodeTest@8297b3a]" started-at="2024-05-19T18:23:35 EEST" name="addDiscountCodeTest" finished-at="2024-05-19T18:23:39 EEST" duration-ms="4118" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addDiscountCodeTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC007_DicountCodeTest@8297b3a]" started-at="2024-05-19T18:23:39 EEST" name="tearDown" finished-at="2024-05-19T18:23:39 EEST" duration-ms="124" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testCases.TC007_DicountCodeTest -->
-      <class name="testCases.TC008_TermsOfServiceTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.TC008_TermsOfServiceTest@2362f559]" started-at="2024-05-19T18:23:34 EEST" name="setUp" finished-at="2024-05-19T18:23:36 EEST" duration-ms="2088" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyMandatoryTermsOfServiceTest()[pri:0, instance:testCases.TC008_TermsOfServiceTest@2362f559]" started-at="2024-05-19T18:23:36 EEST" name="verifyMandatoryTermsOfServiceTest" finished-at="2024-05-19T18:23:40 EEST" duration-ms="4317" status="PASS">
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyMandatoryTermsOfServiceTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC008_TermsOfServiceTest@2362f559]" started-at="2024-05-19T18:23:40 EEST" name="tearDown" finished-at="2024-05-19T18:23:41 EEST" duration-ms="143" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC009_BillingAdressMandatoryTest@544fa968]" started-at="2024-08-08T00:56:50 EEST" name="tearDown" finished-at="2024-08-08T00:56:50 EEST" duration-ms="132" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC009_BillingAdressMandatoryTest -->
+      <class name="testCases.TC008_TermsOfServiceTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.TC008_TermsOfServiceTest@3bd82cf5]" started-at="2024-08-08T00:56:27 EEST" name="setUp" finished-at="2024-08-08T00:56:29 EEST" duration-ms="2106" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyMandatoryTermsOfServiceTest()[pri:0, instance:testCases.TC008_TermsOfServiceTest@3bd82cf5]" started-at="2024-08-08T00:56:29 EEST" name="verifyMandatoryTermsOfServiceTest" finished-at="2024-08-08T00:56:34 EEST" duration-ms="4326" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMandatoryTermsOfServiceTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC008_TermsOfServiceTest@3bd82cf5]" started-at="2024-08-08T00:56:34 EEST" name="tearDown" finished-at="2024-08-08T00:56:34 EEST" duration-ms="119" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCases.TC008_TermsOfServiceTest -->
       <class name="testCases.TC002_InValidRegister">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.TC002_InValidRegister@61322f9d]" started-at="2024-05-19T18:23:28 EEST" name="setUp" finished-at="2024-05-19T18:23:29 EEST" duration-ms="1472" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.TC002_InValidRegister@2362f559]" started-at="2024-08-08T00:56:21 EEST" name="setUp" finished-at="2024-08-08T00:56:23 EEST" duration-ms="2155" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="registerExsitingCustomerTest()[pri:0, instance:testCases.TC002_InValidRegister@61322f9d]" started-at="2024-05-19T18:23:29 EEST" name="registerExsitingCustomerTest" finished-at="2024-05-19T18:23:32 EEST" duration-ms="2716" status="PASS">
+        <test-method signature="registerExsitingCustomerTest()[pri:0, instance:testCases.TC002_InValidRegister@2362f559]" started-at="2024-08-08T00:56:23 EEST" name="registerExsitingCustomerTest" finished-at="2024-08-08T00:56:24 EEST" duration-ms="1205" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerExsitingCustomerTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC002_InValidRegister@61322f9d]" started-at="2024-05-19T18:23:32 EEST" name="tearDown" finished-at="2024-05-19T18:23:33 EEST" duration-ms="1050" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC002_InValidRegister@2362f559]" started-at="2024-08-08T00:56:24 EEST" name="tearDown" finished-at="2024-08-08T00:56:24 EEST" duration-ms="106" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCases.TC002_InValidRegister -->
       <class name="testCases.TC004_InvalidPasswordLoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.TC004_InvalidPasswordLoginTest@510f3d34]" started-at="2024-05-19T18:23:28 EEST" name="setUp" finished-at="2024-05-19T18:23:31 EEST" duration-ms="3097" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.TC004_InvalidPasswordLoginTest@b2c9a9c]" started-at="2024-08-08T00:56:21 EEST" name="setUp" finished-at="2024-08-08T00:56:24 EEST" duration-ms="3055" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="LoginWithValidUserNameAndInvalidPasswordTest()[pri:0, instance:testCases.TC004_InvalidPasswordLoginTest@510f3d34]" started-at="2024-05-19T18:23:31 EEST" name="LoginWithValidUserNameAndInvalidPasswordTest" finished-at="2024-05-19T18:23:32 EEST" duration-ms="928" status="PASS">
+        <test-method signature="LoginWithValidUserNameAndInvalidPasswordTest()[pri:0, instance:testCases.TC004_InvalidPasswordLoginTest@b2c9a9c]" started-at="2024-08-08T00:56:24 EEST" name="LoginWithValidUserNameAndInvalidPasswordTest" finished-at="2024-08-08T00:56:25 EEST" duration-ms="1012" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginWithValidUserNameAndInvalidPasswordTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC004_InvalidPasswordLoginTest@510f3d34]" started-at="2024-05-19T18:23:32 EEST" name="tearDown" finished-at="2024-05-19T18:23:32 EEST" duration-ms="129" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC004_InvalidPasswordLoginTest@b2c9a9c]" started-at="2024-08-08T00:56:25 EEST" name="tearDown" finished-at="2024-08-08T00:56:25 EEST" duration-ms="395" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCases.TC004_InvalidPasswordLoginTest -->
       <class name="testCases.TC005_InvalidUserNameLoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.TC005_InvalidUserNameLoginTest@7817fd62]" started-at="2024-05-19T18:23:32 EEST" name="setUp" finished-at="2024-05-19T18:23:34 EEST" duration-ms="2174" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.TC005_InvalidUserNameLoginTest@4c178a76]" started-at="2024-08-08T00:56:24 EEST" name="setUp" finished-at="2024-08-08T00:56:26 EEST" duration-ms="2191" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="LoginWithValidUserNameAndInvalidPasswordTest()[pri:0, instance:testCases.TC005_InvalidUserNameLoginTest@7817fd62]" started-at="2024-05-19T18:23:34 EEST" name="LoginWithValidUserNameAndInvalidPasswordTest" finished-at="2024-05-19T18:23:35 EEST" duration-ms="1429" status="PASS">
+        <test-method signature="LoginWithValidUserNameAndInvalidPasswordTest()[pri:0, instance:testCases.TC005_InvalidUserNameLoginTest@4c178a76]" started-at="2024-08-08T00:56:26 EEST" name="LoginWithValidUserNameAndInvalidPasswordTest" finished-at="2024-08-08T00:56:27 EEST" duration-ms="786" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginWithValidUserNameAndInvalidPasswordTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC005_InvalidUserNameLoginTest@7817fd62]" started-at="2024-05-19T18:23:35 EEST" name="tearDown" finished-at="2024-05-19T18:23:36 EEST" duration-ms="86" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC005_InvalidUserNameLoginTest@4c178a76]" started-at="2024-08-08T00:56:27 EEST" name="tearDown" finished-at="2024-08-08T00:56:27 EEST" duration-ms="110" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

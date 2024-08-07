@@ -9,18 +9,19 @@ import org.testng.annotations.Test;
 import base.Hooks;
 import pages.CartPage;
 import pages.CheckoutPage;
+import utils.ConfigLoader;
 
 public class TC009_BillingAdressMandatoryTest extends Hooks {
 
-	private String counrtyMsg = getProperty("contryMsg");
-	private String cityMsg = getProperty("cityMsg");
-	private String streetMsg = getProperty("streetMsg");
-	private String postalCodeMsg = getProperty("postalCodeMsg");
-	private String phoneMsg = getProperty("phoneMsg");
+	private String counrtyMsg = ConfigLoader.getProperty("contryMsg");
+	private String cityMsg = ConfigLoader.getProperty("cityMsg");
+	private String streetMsg = ConfigLoader.getProperty("streetMsg");
+	private String postalCodeMsg = ConfigLoader.getProperty("postalCodeMsg");
+	private String phoneMsg = ConfigLoader.getProperty("phoneMsg");
 
-	private String email = getProperty("email");
-	private String password = getProperty("password");
-	private String discountCode = getProperty("discountCode");
+	private String email = ConfigLoader.getProperty("email");
+	private String password = ConfigLoader.getProperty("password");
+	private String discountCode = ConfigLoader.getProperty("discountCode");
 	
 	private List<String> expectedErrorMessages = Arrays.asList(counrtyMsg, cityMsg, streetMsg, postalCodeMsg, phoneMsg);
 

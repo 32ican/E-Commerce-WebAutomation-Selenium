@@ -6,14 +6,15 @@ import org.testng.Assert;
 import base.Hooks;
 import pages.HomePage;
 import pages.LoginPage;
+import utils.ConfigLoader;
 import utils.ExtentManager;
 
 @Listeners(utils.Listeners.class)
 public class TC003_ValidLoginTest extends Hooks{
 	
-	private String email = getProperty("email");
-	private String password = getProperty("password");
-	private String expected = getProperty("email");
+	private String email = ConfigLoader.getProperty("email");
+	private String password = ConfigLoader.getProperty("password");
+	private String expected = ConfigLoader.getProperty("email");
 	
 	
 	@Test (groups = {"Smoke"})

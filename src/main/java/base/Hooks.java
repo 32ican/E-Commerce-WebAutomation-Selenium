@@ -14,6 +14,7 @@ import pages.CartPage;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ProductsPage;
+import utils.ConfigLoader;
 import utils.ExtentManager;
 import utils.WebDriverFactory;
 
@@ -21,7 +22,8 @@ public class Hooks extends BaseClass {
 
 	@BeforeClass(alwaysRun = true)
 	public void setUp() {
-		getDriver().get(getProperty("url"));
+		String url = ConfigLoader.getProperty("url");
+		getDriver().get(url);
 	}
 
 	@AfterMethod

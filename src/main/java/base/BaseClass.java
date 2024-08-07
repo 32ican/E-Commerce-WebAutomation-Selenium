@@ -11,6 +11,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
+import utils.ConfigLoader;
 import utils.WebDriverFactory;
 import org.testng.annotations.Listeners;
 import org.apache.commons.io.FileUtils;
@@ -18,7 +19,7 @@ import org.apache.commons.io.FileUtils;
 @Listeners(utils.Listeners.class)
 public class BaseClass {
 
-	private final String CONFIG_PATH = System.getProperty("user.dir") + "\\src\\main\\resources\\config.properties";
+	//private final String CONFIG_PATH = System.getProperty("user.dir") + "\\src\\main\\resources\\config.properties";
 	private static String  screenshotPath;
 
 	// public WebDriver driver = getDriver();
@@ -26,24 +27,24 @@ public class BaseClass {
 		return WebDriverFactory.getDriver();
 	}
 
-	public String getProperty(String key) {
-
-		Properties prop = new Properties();
-		try {
-			prop.load(new FileInputStream(CONFIG_PATH));
-			
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		return prop.getProperty(key);
-
-	}
+//	public String getProperty(String key) {
+//
+//		Properties prop = new Properties();
+//		try {
+//			prop.load(new FileInputStream(CONFIG_PATH));
+//			
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		
+//		return prop.getProperty(key);
+//
+//	}
 
 	public void takeScreenShot(String name) {
 		String dateTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
-		String path = System.getProperty("user.dir") + getProperty("screenshotDir") + name + "_" + dateTime + ".png";
+		String path = System.getProperty("user.dir") + ConfigLoader.getProperty("screenshotDir") + name + "_" + dateTime + ".png";
 
 		File srcFile = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
 		File destFile = new File(path);

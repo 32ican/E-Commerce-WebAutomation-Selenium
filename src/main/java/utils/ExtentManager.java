@@ -83,6 +83,7 @@ public class ExtentManager {
 	public static void attachImage() {
 		BaseClass base = new BaseClass();
 		String screenshotPath = base.getScreenShotPath();
+		
 		ExtentTest test = getTest();
 		if (test != null) {
 			try {

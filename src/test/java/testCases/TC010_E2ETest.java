@@ -15,26 +15,27 @@ import pages.CheckoutPage;
 import pages.ComputersPage;
 import pages.HomePage;
 import pages.ProductsPage;
+import utils.ConfigLoader;
 import utils.ExtentManager;
 
 public class TC010_E2ETest extends Hooks {
 
-	private String email = getProperty("email");
-	private String password = getProperty("password");
-	private String expectedCartConfirmationMsg = getProperty("CartConfirmationMsg");
-	private String discountCode = getProperty("discountCode");
-	private String country = getProperty("country");
-	private String city = getProperty("city");
-	private String street = getProperty("street");
-	private String postalCode = getProperty("postalCode");
-	private String phone = getProperty("phone");
-	private String cardType = getProperty("cardType");
-	private String cardHolder = getProperty("cardHolder");
-	private String cardNumber = getProperty("cardNumber");
-	private String expMonth = getProperty("expMonth");
-	private String expYear = getProperty("expYear");
-	private String cardCode = getProperty("cardCode");
-	private String ExpectedOrderConfirmationMsg = getProperty("orderConfirmationMsg");
+	private String email = ConfigLoader.getProperty("email");
+	private String password = ConfigLoader.getProperty("password");
+	private String expectedCartConfirmationMsg = ConfigLoader.getProperty("CartConfirmationMsg");
+	private String discountCode = ConfigLoader.getProperty("discountCode");
+	private String country = ConfigLoader.getProperty("country");
+	private String city = ConfigLoader.getProperty("city");
+	private String street = ConfigLoader.getProperty("street");
+	private String postalCode = ConfigLoader.getProperty("postalCode");
+	private String phone = ConfigLoader.getProperty("phone");
+	private String cardType = ConfigLoader.getProperty("cardType");
+	private String cardHolder = ConfigLoader.getProperty("cardHolder");
+	private String cardNumber = ConfigLoader.getProperty("cardNumber");
+	private String expMonth = ConfigLoader.getProperty("expMonth");
+	private String expYear = ConfigLoader.getProperty("expYear");
+	private String cardCode = ConfigLoader.getProperty("cardCode");
+	private String ExpectedOrderConfirmationMsg = ConfigLoader.getProperty("orderConfirmationMsg");
 
 	@Test(groups = {"Smoke"})
 	public void E2ETest() {

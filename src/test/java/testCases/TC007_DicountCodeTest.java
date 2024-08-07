@@ -5,12 +5,13 @@ import org.testng.annotations.Test;
 
 import base.Hooks;
 import pages.CartPage;
+import utils.ConfigLoader;
 
 public class TC007_DicountCodeTest extends Hooks {
 
-	private String email = getProperty("email");
-	private String password = getProperty("password");
-	private String discountCode = getProperty("discountCode");
+	private String email = ConfigLoader.getProperty("email");
+	private String password = ConfigLoader.getProperty("password");
+	private String discountCode = ConfigLoader.getProperty("discountCode");
 
 	@Test(groups = { "Regression" })
 	public void addDiscountCodeTest() {

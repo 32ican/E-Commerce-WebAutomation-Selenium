@@ -7,16 +7,17 @@ import base.Hooks;
 import pages.HomePage;
 import pages.RegisterPage;
 import pages.RegisterResultPage;
+import utils.ConfigLoader;
 
 public class TC002_InValidRegister extends Hooks{
 	
-	private String gender = getProperty("gender");
-	private String firstName = getProperty("firstName");
-	private String lastName = getProperty("LastName");
-	private String email = getProperty("email");
-	private String password = getProperty("password");
+	private String gender = ConfigLoader.getProperty("gender");
+	private String firstName = ConfigLoader.getProperty("firstName");
+	private String lastName = ConfigLoader.getProperty("LastName");
+	private String email = ConfigLoader.getProperty("email");
+	private String password = ConfigLoader.getProperty("password");
 	
-	private String expected = getProperty("unsuccessfulRegisterMsg");
+	private String expected = ConfigLoader.getProperty("unsuccessfulRegisterMsg");
 	private String actual;
 
 	@Test(groups = {"Regression"})

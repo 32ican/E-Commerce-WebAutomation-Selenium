@@ -7,12 +7,13 @@ import base.Hooks;
 import org.testng.Assert;
 import pages.HomePage;
 import pages.LoginPage;
+import utils.ConfigLoader;
 
 public class TC004_InvalidPasswordLoginTest extends Hooks{
 	
-	private String email = getProperty("email");
-	private String password = "invalid" + getProperty("password");
-	private String expected = getProperty("failedLoginMsg");
+	private String email = ConfigLoader.getProperty("email");
+	private String password = "invalid" + ConfigLoader.getProperty("password");
+	private String expected = ConfigLoader.getProperty("failedLoginMsg");
 	
 	@Test (groups = {"Regression"})
 	public void LoginWithValidUserNameAndInvalidPasswordTest() {

@@ -5,9 +5,10 @@
     <classes>
       <class name="testCases.TC009_BillingAdressMandatoryTest">
         <methods>
-          <include name="openUrl"/>
           <include name="verifyMandatoryTermsOfServiceTest"/>
-          <include name="quitDriver"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="logOUt"/>
         </methods>
       </class> <!-- testCases.TC009_BillingAdressMandatoryTest -->
     </classes>

@@ -7,16 +7,17 @@ import base.Hooks;
 import pages.HomePage;
 import pages.RegisterPage;
 import pages.RegisterResultPage;
+import utils.ConfigLoader;
 
 public class TC001_ValidRegisterTest extends Hooks{
 	
-	private String gender = getProperty("gender");
-	private String firstName = getProperty("firstName");
-	private String lastName = getProperty("LastName");
-	private String email = getProperty("email");
-	private String password = getProperty("password");
+	private String gender = ConfigLoader.getProperty("gender");
+	private String firstName = ConfigLoader.getProperty("firstName");
+	private String lastName = ConfigLoader.getProperty("LastName");
+	private String email = ConfigLoader.getProperty("email");
+	private String password = ConfigLoader.getProperty("password");
 	
-	private String expected = getProperty("SuccessfulRegisterMsg");
+	private String expected = ConfigLoader.getProperty("SuccessfulRegisterMsg");
 	private String actual;
 
 	@Test(groups = {"Smoke"})
