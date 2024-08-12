@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.TC009_BillingAdressMandatoryTest">
+      <class name="testCases.TC010_E2ETest">
         <methods>
-          <include name="verifyMandatoryTermsOfServiceTest"/>
+          <include name="E2ETest"/>
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="logOUt"/>
         </methods>
-      </class> <!-- testCases.TC009_BillingAdressMandatoryTest -->
+      </class> <!-- testCases.TC010_E2ETest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
