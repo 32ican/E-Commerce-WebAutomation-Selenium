@@ -1,32 +1,35 @@
 package utils;
 
 import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+public class WebDriverManager {
+    private WebDriver driver;
 
-public class WebDriverFactory {
+    public WebDriver getDriver() {
+    	
+        if (driver == null) {
+         initializeDriver(ConfigLoader.getProperty("browser")); 
+        }
+        return driver;
+    }
 
-	public static ThreadLocal<WebDriver> driverT = new ThreadLocal<>();
-
-	
-	
-	public synchronized static WebDriver getDriver() {
-
-		if (driverT.get() == null) {
-			driverT.set(createDriver());
-		}
-		
-		return driverT.get();
-	}
-
-	public static WebDriver createDriver() {
-		WebDriver driver;
-		String browser = ConfigLoader.getProperty("browser");
-		
-		switch (browser.toLowerCase()) {
+    public void quitDriver() {
+        if (driver != null) {
+        	driver.close();
+            driver.quit();
+            driver = null;
+        }
+    }
+    
+    public WebDriver initializeDriver(String browser) {
+    	WebDriver driver;
+    	
+    	switch (browser.toLowerCase()) {
 		case "chrome":
 			 driver = new ChromeDriver();
 			 break;
@@ -47,16 +50,6 @@ public class WebDriverFactory {
 		driver.manage().window().maximize();
 		
 		return driver;
-
-	}
-
-	
-	public synchronized static void cleanupDriver() {
-		if (driverT.get() !=null) {
-			driverT.get().quit();
-			driverT.remove();
-		}
 		
-	}
-
+    }
 }

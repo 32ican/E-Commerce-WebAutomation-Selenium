@@ -3,8 +3,6 @@ package utils;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-import org.testng.ITestContext;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;

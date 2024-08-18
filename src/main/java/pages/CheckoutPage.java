@@ -62,6 +62,12 @@ public class CheckoutPage {
 		
 	}
 	
+	public String getBillingAddressErrorMsgsAsString(int index){
+		
+		return getBillingAddressErrorMsgsAsString().get(index);
+		
+	}
+	
 	public WebElement getCountryField() {
 		return driver.findElement(country);
 	}

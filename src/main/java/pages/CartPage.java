@@ -23,6 +23,7 @@ public class CartPage {
 	private By agreeBtn = By.id("termsofservice");
 	private By quatity = By.className("qty-input");
 	
+	
 	public WebElement getDiscountCodeField() {
 		return driver.findElement(discountCode);
 	}

@@ -18,7 +18,7 @@ public class HomePage {
 	private By loginBtn = By.linkText("Log in");
 	private By account = By.cssSelector(".header-links .account");
 	private By books = By.cssSelector(".block-category-navigation [href='\\/books']");
-	private By cartLink = By.linkText("shopping cart");
+	private By cartLink =By.cssSelector("a[href='/cart']");
 	private By logOutBtn = By.linkText("Log out");
 	
 
