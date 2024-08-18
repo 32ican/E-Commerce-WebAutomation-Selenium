@@ -19,10 +19,5 @@ import org.testng.annotations.Listeners;
 @Listeners(utils.Listeners.class)
 public class RunnerTestNG extends AbstractTestNGCucumberTests {
 	
-        @Override
-        @DataProvider(parallel = false)
-        public Object[][] scenarios() {
-                return super.scenarios();
-        }
 
 }
