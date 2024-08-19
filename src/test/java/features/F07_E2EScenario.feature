@@ -2,7 +2,7 @@
 
   Feature: E2E Order checkout
 
-    @Smoke
+    @Smoke @E2E
     Scenario:End to end scenario: User could order a simple computer and check it out
 
       Given user logged in to his account with username "mof16@test.com" and password "12341234"

@@ -17,20 +17,26 @@ public class LoginPage {
 		this.driver = driver;
 	}
 	
-	public WebElement getPasswordField () {
-		return driver.findElement(passwordField);
+//	public WebElement getPasswordField () {
+//		return driver.findElement(passwordField);
+//	}
+	
+	public void enterPassword (String password) {
+		 driver.findElement(passwordField).sendKeys(password);;
+		
 	}
 	
-	public WebElement getEmailField () {
-		return driver.findElement(emailField);
+	
+	public void enterEmail (String email) {
+		 driver.findElement(emailField).sendKeys(email);;
 	}
 	
-	public WebElement getLoginBtn () {
-		return driver.findElement(loginBtn);
+	public void clickLoginBtn () {
+		 driver.findElement(loginBtn).click();
 	}
 	
-	public WebElement getFailledLoginErrorMsg () {
-		return driver.findElement(FailledLoginErrorMsg);
+	public String getFailledLoginErrorMsg () {
+		return driver.findElement(FailledLoginErrorMsg).getText();
 	}
 	
 }

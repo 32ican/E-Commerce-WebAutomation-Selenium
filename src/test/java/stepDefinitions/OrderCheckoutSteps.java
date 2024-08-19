@@ -4,22 +4,16 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import pages.CheckoutPage;
+import utils.Commands;
 import utils.ConfigLoader;
 import utils.ExtentManager;
 import utils.PageObjectManager;
-
-import java.time.Duration;
-
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import utils.WebDriverManager;
 import org.testng.Assert;
 
-import base.BaseClass;
-
-public class OrderCheckoutSteps extends BaseClass {
+public class OrderCheckoutSteps{
 	
-	PageObjectManager pageOpjectManager = new PageObjectManager(driver);
+	PageObjectManager pageOpjectManager = new PageObjectManager(WebDriverManager.getDriver());
 	CheckoutPage checkout = pageOpjectManager.getCheckoutPage();
 	
 	
@@ -33,16 +27,16 @@ public class OrderCheckoutSteps extends BaseClass {
 
 		try {
 			ExtentManager.log("Filling Billing Address.....");
-			Select selectCountry = new Select(checkout.getCountryField());
-			selectCountry.selectByVisibleText(country);
-			checkout.getCityField().sendKeys(city);
-			checkout.getAddress1Field().sendKeys(street);
-			checkout.getPostalCodeField().sendKeys(postalCode);
-			checkout.getPhoneField().sendKeys(phone);
+			checkout.selectCountry(country);
+			checkout.enterCity(city);
+			checkout.enterStreet(street);
+			checkout.enterPostalCode(postalCode);
+			checkout.enterPhoneNumber(phone);
 		} catch (Exception e) {
 			e.getMessage();
 		}
-		checkout.getBillingAddressContinueBtn().click();
+		
+		checkout.clickContinueAfterBillingAddress();
 	}
 
 	@And("^continue to payment method and enter the payment information:$")
@@ -54,27 +48,15 @@ public class OrderCheckoutSteps extends BaseClass {
 		String expYear = cardInfo.cell(4, 1);
 		String cardCode = cardInfo.cell(5, 1);
 
-		checkout.getShippingAddressContinueBtn().click();
-		checkout.getShippingMethodContinueBtn().click();
-		checkout.getCreditRadioBtn().click();
-		checkout.getContinueToPaymentBtn().click();
+		checkout.clickShippingAddressContinueBtn();
+		checkout.clickShippingMethodContinueBtn();
+		checkout.clickCreditRadioBtn();
+		checkout.clickContinueToPaymentBtn();
 
-		Select selectCardType = new Select(checkout.getCardTypeMenu());
-		selectCardType.selectByVisibleText(cardType);
+		checkout.enterCridetCardCredentials(cardType, cardHolder, cardNumber, expMonth, expYear, cardCode);
 
-		checkout.getCardHolderField().sendKeys(cardHolder);
-		checkout.getCardNumberField().sendKeys(cardNumber);
-
-		Select selectMonth = new Select(checkout.getExpireMonthMenu());
-		selectMonth.selectByVisibleText(expMonth);
-
-		Select selectYear = new Select(checkout.getExpireYearMenu());
-		selectYear.selectByVisibleText(expYear);
-
-		checkout.getCardCodeField().sendKeys(cardCode);
-
-		checkout.getContinueToConfirmOrderBtn().click();
-		checkout.getConfirmBtn().click();
+		checkout.clickContinueToConfirmOrderBtn();
+		checkout.clickConfirmBtn();
 
 	}
 
@@ -83,11 +65,10 @@ public class OrderCheckoutSteps extends BaseClass {
 	public void user_could_see_confirmation_message_something(String comfirmMsg) throws Throwable {
 
 		// wait until confirmation order page be loaded
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-		wait.until(ExpectedConditions.invisibilityOf(checkout.getConfirmBtn()));
-
+		Commands.waitForInvisibilty(checkout.getConfirmBtn(), 10);
+		
 		String ExpectedOrderConfirmationMsg = ConfigLoader.getProperty("orderConfirmationMsg");
-		String actualConfirmationMsg = checkout.getOrderConfirmationMsg().getText();
+		String actualConfirmationMsg = checkout.getOrderConfirmationMsg();
 		System.out.println(actualConfirmationMsg);
 		Assert.assertEquals(ExpectedOrderConfirmationMsg, actualConfirmationMsg);
 

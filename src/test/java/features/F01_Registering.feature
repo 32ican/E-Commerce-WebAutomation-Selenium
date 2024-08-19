@@ -14,7 +14,7 @@ Feature: Registering customers
       | firstName | lastName | email          | password |
       | Mof       | Zak      | mof16@test.com | 12341234 |
       | Mof       | Zak      | mof17@test.com | 12341234 |
-      | Mof       | Zak      | mof18@test.com | 12341234 |
+      | Mof       | Zak      | mof19@test.com | 12341234 |
 
   @Regression 
   Scenario: an already registered user try to register with same data

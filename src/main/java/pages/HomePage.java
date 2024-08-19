@@ -23,27 +23,28 @@ public class HomePage {
 	
 
 	// methods
-	public WebElement getRegisterBtn() {
-		return driver.findElement(registerBtn);
+	public void clickRegister() {
+		 driver.findElement(registerBtn).click();
 	}
 
-	public WebElement getLoginBtn() {
-		return driver.findElement(loginBtn);
-	}
 
-	public WebElement getAccount() {
-		return driver.findElement(account);
+
+	public void  clickLogin() {
+		driver.findElement(loginBtn).click();;
+	}
+	public String getAccountConfirmationMsg() {
+		return driver.findElement(account).getText();
 	}
 
 	public WebElement getBooksLink() {
 		return driver.findElement(books);
 	}
 	
-	public WebElement getCartLink() {
-		return driver.findElement(cartLink);
+	public void navigateToCart() {
+		 driver.findElement(cartLink).click();
 	}
 
-	public WebElement getLogOutBtn() {
-		return driver.findElement(logOutBtn);
+	public void clickLogOutBtn() {
+		 driver.findElement(logOutBtn).click();
 	}
 }

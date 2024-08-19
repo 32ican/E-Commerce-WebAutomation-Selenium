@@ -3,18 +3,16 @@ package stepDefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import base.BaseClass;
 import pages.CartPage;
 import pages.HomePage;
 import utils.ExtentManager;
 import utils.PageObjectManager;
-
-import org.openqa.selenium.Keys;
+import utils.WebDriverManager;
 import org.testng.Assert;
 
-public class DiscountCodSteps extends BaseClass {
+public class DiscountCodSteps{
 
-	PageObjectManager pageOpjectManager = new PageObjectManager(driver);
+	PageObjectManager pageOpjectManager = new PageObjectManager(WebDriverManager.getDriver());
 
 	HomePage homePage = pageOpjectManager.getHomePage();
 	CartPage cart  = pageOpjectManager.getCartPage();
@@ -22,18 +20,17 @@ public class DiscountCodSteps extends BaseClass {
     @When("^user go to shopping cart$")
     public void user_go_to_shopping_cart() throws Throwable {
     
-		homePage.getCartLink().click();
-		cart.getQuantity().clear();
-		cart.getQuantity().sendKeys("1");
-		cart.getQuantity().sendKeys(Keys.ENTER);
+		homePage.navigateToCart();
+		cart.senQuantity(1);
     }
+		
 
     @And("^give the discount code \"([^\"]*)\"$")
     public void give_the_discount_code(String code) throws Throwable {
     	ExtentManager.log("Applying discount code.....");
     
-		cart.getDiscountCodeField().sendKeys(code);
-		cart.getApplyCopunBtn().click();
+		cart.applyCopunCode(code);
+		
     }
 
 

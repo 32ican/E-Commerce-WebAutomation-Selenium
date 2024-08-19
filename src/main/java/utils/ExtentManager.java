@@ -8,8 +8,6 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-import base.BaseClass;
-
 public class ExtentManager {
 
 	private static ExtentReports extentReport;
@@ -79,7 +77,7 @@ public class ExtentManager {
 	}
 
 	public static void attachImage() {
-		BaseClass base = new BaseClass();
+		Commands base = new Commands();
 		String screenshotPath = base.getScreenShotPath();
 		
 		ExtentTest test = getTest();

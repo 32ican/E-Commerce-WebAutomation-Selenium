@@ -10,13 +10,11 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import base.BaseClass;
-import base.Hooks;
 import io.cucumber.java.Scenario;
 
 public class Listeners implements ITestListener {
 
-	private BaseClass base = new BaseClass();
+	private Commands base = new Commands();
 
 	public synchronized void onStart(ITestContext context) {
 		ExtentManager.getReport();

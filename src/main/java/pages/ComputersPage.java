@@ -11,14 +11,18 @@ public class ComputersPage {
 	public ComputersPage(WebDriver driver) {
 		this.driver = driver;
 	}
-	
+	// Locators
 	private By computers = By.linkText("COMPUTERS");
 	private By desktops = By.linkText("Desktops");
 	private By simpleComputer = By.linkText("Simple Computer");
 	private By processorRadioBtn = By.id("product_attribute_75_5_31_96");
 	
-	public WebElement getComputers() {
-		return driver.findElement(computers);
+	// action Methods
+	public void selectComputer() {
+		 driver.findElement(computers).click();
+		 driver.findElement(desktops).click();
+		 driver.findElement(simpleComputer).click();
+		 driver.findElement(processorRadioBtn).click();
 	}
 	
 	public WebElement getDesktops() {

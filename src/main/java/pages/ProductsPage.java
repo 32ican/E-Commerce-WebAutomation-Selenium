@@ -28,12 +28,16 @@ public class ProductsPage {
 		return driver.findElement(addBookToCartBtn);
 	}
 	
-	public WebElement getConfirmationMsg() {
+	public String getConfirmationMsg() {
+		return driver.findElement(confirmationMsg).getText();
+	}
+	
+	public WebElement confitmationMsg() {
 		return driver.findElement(confirmationMsg);
 	}
 	
-	public WebElement getAddSimpleComputerToCartBtn() {
-		return driver.findElement(addSimpleComputerToCartBtn);
+	public void addComputerToCart() {
+		 driver.findElement(addSimpleComputerToCartBtn).click();
 	}
 	
 	

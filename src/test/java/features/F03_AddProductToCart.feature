@@ -3,7 +3,7 @@
 
   Feature: Adding new product to cart
 
-    @Smoke @OneTime
+    @Smoke
     Scenario: After logging in user could add product to cart
 
       Given user logged in to his account with username "mof16@test.com" and password "12341234"

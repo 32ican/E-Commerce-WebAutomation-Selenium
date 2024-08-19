@@ -19,11 +19,11 @@ public class RegisterResultPage {
 	
 	//Methods
 	
-	public WebElement getSuccessfulRegisterMsg () {
-		return driver.findElement(SuccessfulRegisterMsg);
+	public String getSuccessfulRegisterMsg () {
+		return driver.findElement(SuccessfulRegisterMsg).getText();
 	}
 	
-	public WebElement getUnsuccessfulRegisterMsg () {
-		return driver.findElement(UnsuccessfulRegisterMsg);
+	public String getUnsuccessfulRegisterMsg () {
+		return driver.findElement(UnsuccessfulRegisterMsg).getText();
 	}
 }

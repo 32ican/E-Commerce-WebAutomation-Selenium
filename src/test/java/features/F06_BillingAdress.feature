@@ -5,7 +5,7 @@
 
     Background:
 
-      Given user logged in to his account with username "mof16@test.com" and password "12341234"
+      Given user logged in to his account with username "mof18@test.com" and password "12341234"
       When user go to shopping cart
       And agree the terms of service
       And click on check out

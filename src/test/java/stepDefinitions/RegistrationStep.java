@@ -2,7 +2,6 @@ package stepDefinitions;
 
 import org.testng.Assert;
 
-import base.BaseClass;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -13,48 +12,40 @@ import pages.RegisterResultPage;
 import utils.ConfigLoader;
 import utils.ExtentManager;
 import utils.PageObjectManager;
+import utils.WebDriverManager;
 
-public class RegistrationStep extends BaseClass {
+public class RegistrationStep {
+	
+	PageObjectManager pageOpjectManager = new PageObjectManager(WebDriverManager.getDriver());
 
-	PageObjectManager pageOpjectManager = new PageObjectManager(driver);
-
-	HomePage home = new PageObjectManager(driver).getHomePage();
+	HomePage homePage = pageOpjectManager.getHomePage();
 	RegisterPage registerPage = pageOpjectManager.getRegisterPage();
 	RegisterResultPage registerResultPage = pageOpjectManager.getRegisterResultPage();
 	
 	
 	@Given("^user at home page and clicks on register$")
     public void user_at_home_page_and_clicks_on_register() throws Throwable {
-
-		HomePage homePage = new HomePage(driver);
-		homePage.getRegisterBtn().click();
 		
-		
+		homePage.clickRegister();
     }
 
     @When("^user enters (.+), (.+), (.+) and (.+)$")
     public void user_enters_and(String firstname, String lastname, String email, String password) throws Throwable {
     	
 		//registerPage.getGenderRadioBtn(gender).click();
-		registerPage.getFirstNameField().sendKeys(firstname);
-		registerPage.getLastNameField().sendKeys(lastname);
-		registerPage.getEmailField().sendKeys(email);
-		registerPage.getPasswordField().sendKeys(password);
-		registerPage.getConfirmPasswordField().sendKeys(password);
-
-		
+    	registerPage.register(firstname, lastname, email, password, password);
     }
 
     @Then("^User could register successfully$")
     public void user_could_register_successfully_and_confirmation_message_should_appear() throws Throwable {
  
-    	registerPage.getRegisterBtn().click();
+    	registerPage.clickRegisterBtn();
     }
 
     @And("^confirmation message should appear$")
     public void confirmation_messaage_should_appear (){
     	// verification
-		String actual = registerResultPage.getSuccessfulRegisterMsg().getText();
+		String actual = registerResultPage.getSuccessfulRegisterMsg();
 		String expected = ConfigLoader.getProperty("SuccessfulRegisterMsg");
 		Assert.assertEquals(actual, expected);
     }
@@ -83,15 +74,13 @@ public class RegistrationStep extends BaseClass {
 
     @Then("^user could not register with same data$")
     public void user_could_not_register() throws Throwable {
-    
-    	registerPage.getRegisterBtn().click();
-    	Thread.sleep(5000);
+    	registerPage.clickRegisterBtn();
     }
 
     @And("error message should appear")
     public void error_message_should_appear(){
         String expected = ConfigLoader.getProperty("unsuccessfulRegisterMsg");
-		String actual = registerResultPage.getUnsuccessfulRegisterMsg().getText();
+		String actual = registerResultPage.getUnsuccessfulRegisterMsg();
 		
 		Assert.assertEquals(actual, expected);
     }
@@ -100,7 +89,7 @@ public class RegistrationStep extends BaseClass {
 		// logout
 		try {
 			
-			home.getLogOutBtn().click();
+			homePage.clickLogOutBtn();
 		} catch (Exception e) {
 			e.getStackTrace();
 		}

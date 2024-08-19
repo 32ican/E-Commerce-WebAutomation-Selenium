@@ -6,39 +6,36 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 import java.util.List;
-
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-
-import base.BaseClass;
 import pages.CartPage;
 import pages.CheckoutPage;
 import utils.ExtentManager;
 import utils.PageObjectManager;
+import utils.WebDriverManager;
 
-public class BillingAdressVerificationsteps extends BaseClass {
+public class BillingAdressVerificationsteps {
 
-	PageObjectManager pageOpjectManager = new PageObjectManager(driver);
+	PageObjectManager pageOpjectManager = new PageObjectManager(WebDriverManager.getDriver());
 	CartPage cart  = pageOpjectManager.getCartPage();
 	CheckoutPage checkout = pageOpjectManager.getCheckoutPage();
 	
 
 	@And("^agree the terms of service$")
 	public void agree_the_terms_of_service() throws Throwable {
-		cart.getAgreeBtn().click();
+		cart.agreeTermsOfService();
 	}
 
 	@And("^click on check out$")
 	public void click_on_check_out() throws Throwable {
-		cart.getCheckoutBtn().click();
-		String checkoutTitle = checkout.getCheckoutTitle().getText();
+		cart.checkout();
+		String checkoutTitle = checkout.getCheckoutTitle();
 		Assert.assertTrue(checkoutTitle.toLowerCase().contains("checkout"));
 
 	}
 
 	@When("^user click on continue without selecting a country$")
 	public void user_click_on_continue_without_selecting_a_country() throws Throwable {
-		checkout.getBillingAddressContinueBtn().click();
+		checkout.clickContinueAfterBillingAddress();
 	}
 
 	// assert that error message: data is required will appear
@@ -52,9 +49,8 @@ public class BillingAdressVerificationsteps extends BaseClass {
 	public void user_select_a_country_something_and_click_on_continue(String country) throws Throwable {
 		ExtentManager.log("Filling Billing Address.....");
 
-		Select selectCountry = new Select(checkout.getCountryField());
-		selectCountry.selectByVisibleText(country);
-		checkout.getBillingAddressContinueBtn().click();
+		checkout.selectCountry(country);
+		checkout.clickContinueAfterBillingAddress();
 
 	}
 
@@ -62,27 +58,27 @@ public class BillingAdressVerificationsteps extends BaseClass {
 	public void user_select_country_and_fill_the_city_as_follows(DataTable dataTable) throws Throwable {
 	
 		checkout.selectCountry(dataTable.cell(1, 0));
-		checkout.getCityField().sendKeys(dataTable.cell(1, 1));
-		checkout.getBillingAddressContinueBtn().click();
+		checkout.enterCity(dataTable.cell(1, 1));
+		checkout.clickContinueAfterBillingAddress();
 	}
 
 	@When("^user fill the address as follows and click continue$")
 	public void user_fill_the_address_something_and_click_continue(DataTable dataTable) throws Throwable {
 	
 		checkout.selectCountry(dataTable.cell(1, 0));
-		checkout.getCityField().sendKeys(dataTable.cell(1, 1));
-		checkout.getAddress1Field().sendKeys(dataTable.cell(1, 2));
-		checkout.getBillingAddressContinueBtn().click();
+		checkout.enterCity(dataTable.cell(1, 1));
+		checkout.enterStreet(dataTable.cell(1, 2));
+		checkout.clickContinueAfterBillingAddress();
 	}
 
 	@When("^user fill the zip code and click on continue$")
 	public void user_fill_the_zip_code_something_and_click_on_continue(DataTable dataTable) throws Throwable {
 	
 		checkout.selectCountry(dataTable.cell(1, 0));
-		checkout.getCityField().sendKeys(dataTable.cell(1, 1));
-		checkout.getAddress1Field().sendKeys(dataTable.cell(1, 2));
-		checkout.getPostalCodeField().sendKeys(dataTable.cell(1, 3));
-		checkout.getBillingAddressContinueBtn().click();
+		checkout.enterCity(dataTable.cell(1, 1));
+		checkout.enterStreet(dataTable.cell(1, 2));
+		checkout.enterPostalCode(dataTable.cell(1, 3));
+		checkout.clickContinueAfterBillingAddress();
 
 	}
 

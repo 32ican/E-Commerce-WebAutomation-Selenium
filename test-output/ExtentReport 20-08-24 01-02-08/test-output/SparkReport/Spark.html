@@ -1,0 +1,1886 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Aug 20, 2024 01:02:08 AM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@Smoke</a><a class="dropdown-item" href="#">@Regression</a><a class="dropdown-item" href="#">@OneTime</a><a class="dropdown-item" href="#">@E2E</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Registering customers</p>
+            <p class="text-sm">
+              <span>1:02:09 AM</span> / <span>00:00:32:122</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Registering customers</h5>
+<span class='badge badge-success'>08.20.2024 1:02:09 AM</span>
+<span class='badge badge-danger'>08.20.2024 1:02:41 AM</span>
+<span class='badge badge-default'>00:00:32:122</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="4"><span class="badge log fail-bg mr-2">Fail</span>Registering 3 new customers with valid email</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="5"><span class="badge log fail-bg mr-2">Fail</span>Registering 3 new customers with valid email</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given user at home page and clicks on register</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters Mof, Zak, mof17@test.com and 12341234</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User could register successfully</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>And confirmation message should appear</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".result"}
+  (Session info: chrome=127.0.6533.100)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.1', revision: '656257d8e9'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a78b3f405bdb1331680d292b795ef948, findElement {using=css selector, value=.result}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.100, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Users\Mofid\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60660}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60660/devtoo..., se:cdpVersion: 127.0.6533.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a78b3f405bdb1331680d292b795ef948
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at pages.RegisterResultPage.getSuccessfulRegisterMsg(RegisterResultPage.java:23)
+	at stepDefinitions.RegistrationStep.confirmation_messaage_should_appear(RegistrationStep.java:48)
+	at ✽.confirmation message should appear(file:///D:/pro/projects/TricentisWebShopAutomation/src/test/java/features/F01_Registering.feature:10)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And user log out</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="6"><span class="badge log fail-bg mr-2">Fail</span>Registering 3 new customers with valid email</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given user at home page and clicks on register</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters Mof, Zak, mof16@test.com and 12341234</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User could register successfully</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>And confirmation message should appear</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".result"}
+  (Session info: chrome=127.0.6533.100)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.1', revision: '656257d8e9'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b43bb200334c57ae963ad638d583200e, findElement {using=css selector, value=.result}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.100, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Users\Mofid\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60674}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60674/devtoo..., se:cdpVersion: 127.0.6533.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b43bb200334c57ae963ad638d583200e
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at pages.RegisterResultPage.getSuccessfulRegisterMsg(RegisterResultPage.java:23)
+	at stepDefinitions.RegistrationStep.confirmation_messaage_should_appear(RegistrationStep.java:48)
+	at ✽.confirmation message should appear(file:///D:/pro/projects/TricentisWebShopAutomation/src/test/java/features/F01_Registering.feature:10)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And user log out</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="29"><span class="badge log fail-bg mr-2">Fail</span>Registering 3 new customers with valid email</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given user at home page and clicks on register</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters Mof, Zak, mof18@test.com and 12341234</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User could register successfully</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>And confirmation message should appear</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".result"}
+  (Session info: chrome=127.0.6533.100)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.1', revision: '656257d8e9'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a951c68d26d6bf58bc2c3f30e964bed6, findElement {using=css selector, value=.result}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.100, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Users\Mofid\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60703}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60703/devtoo..., se:cdpVersion: 127.0.6533.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a951c68d26d6bf58bc2c3f30e964bed6
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at pages.RegisterResultPage.getSuccessfulRegisterMsg(RegisterResultPage.java:23)
+	at stepDefinitions.RegistrationStep.confirmation_messaage_should_appear(RegistrationStep.java:48)
+	at ✽.confirmation message should appear(file:///D:/pro/projects/TricentisWebShopAutomation/src/test/java/features/F01_Registering.feature:10)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And user log out</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="40"><span class="badge log pass-bg mr-2">Pass</span>an already registered user try to register with same data</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.RegistrationStep.user_at_home_page_and_clicks_on_register()">
+                <span>Given user at home page and clicks on register</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.RegistrationStep.user_enters_same_data_something_something_something_something_something(java.lang.String,java.lang.String,java.lang.String,java.lang.String)">
+                <span>When user enters same data "Mof", "Zak", "mof16@test.com", "12341234"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.RegistrationStep.user_could_not_register()">
+                <span>Then user could not register with same data</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.RegistrationStep.error_message_should_appear()">
+                <span>And error message should appear</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="54"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">testing logging in feature</p>
+            <p class="text-sm">
+              <span>1:02:31 AM</span> / <span>00:00:10:639</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">testing logging in feature</h5>
+<span class='badge badge-success'>08.20.2024 1:02:31 AM</span>
+<span class='badge badge-danger'>08.20.2024 1:02:42 AM</span>
+<span class='badge badge-default'>00:00:10:639</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=54</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="55"><span class="badge log pass-bg mr-2">Pass</span>user could sign in with valid data</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.user_click_on_log_in_button()">
+                <span>Given user click on log in button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.user_enters_email_something_and_password_something(java.lang.String,java.lang.String)">
+                <span>When user enters email: "mof16@test.com" and password: "12341234"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.clicks_on_log_in_button()">
+                <span>And clicks on log in button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.user_could_see_his_account()">
+                <span>Then user could see his account</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="67"><span class="badge log pass-bg mr-2">Pass</span>user try to log in with a valid email and invalid password</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.user_click_on_log_in_button()">
+                <span>Given user click on log in button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.user_enters_email_something_and_password_something(java.lang.String,java.lang.String)">
+                <span>When user enters a valid email: "mof16@test.com" and invalid password: "12345667"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.clicks_on_log_in_button()">
+                <span>And clicks on log in button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.user_could_not_log_in_to_his_account_and_error_message_will_appear_contains_something(java.lang.String)">
+                <span>Then user could not log in to his account and error message will appear contains "The credentials provided are incorrect"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="79"><span class="badge log pass-bg mr-2">Pass</span>user try to log in with an invalid username</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.user_click_on_log_in_button()">
+                <span>Given user click on log in button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.user_enters_email_something_and_password_something(java.lang.String,java.lang.String)">
+                <span>When user enters an invalid email: "fake@test.com" and password "12341234"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.clicks_on_log_in_button()">
+                <span>And clicks on log in button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.user_could_not_log_in_to_his_account_and_error_message_will_appear_contains_something(java.lang.String)">
+                <span>Then user could not log in to his account and error message will appear contains "No customer account found"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="91"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Adding new product to cart</p>
+            <p class="text-sm">
+              <span>1:02:42 AM</span> / <span>00:00:07:045</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Adding new product to cart</h5>
+<span class='badge badge-success'>08.20.2024 1:02:42 AM</span>
+<span class='badge badge-danger'>08.20.2024 1:02:49 AM</span>
+<span class='badge badge-default'>00:00:07:045</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=91</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="92"><span class="badge log pass-bg mr-2">Pass</span>After logging in user could add product to cart</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.AddToCartSteps.user_logged_in_to_his_account_with_username_something_and_password_something(java.lang.String,java.lang.String)">
+                <span>Given user logged in to his account with username "mof16@test.com" and password "12341234"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AddToCartSteps.user_could_select_a_new_product_simple_computer()">
+                <span>When user select a new product: simple computer</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AddToCartSteps.add_it_to_cart()">
+                <span>And add it to cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AddToCartSteps.confirmation_message_something_should_appear(java.lang.String)">
+                <span>Then confirmation message: "The product has been added to your" should appear</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.RegistrationStep.user_log_out()">
+                <span>And user log out</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="99"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Adding discount code</p>
+            <p class="text-sm">
+              <span>1:02:42 AM</span> / <span>00:00:08:562</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Adding discount code</h5>
+<span class='badge badge-success'>08.20.2024 1:02:42 AM</span>
+<span class='badge badge-danger'>08.20.2024 1:02:51 AM</span>
+<span class='badge badge-default'>00:00:08:562</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=99</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="100"><span class="badge log pass-bg mr-2">Pass</span>user could add discount code "AutomationDiscount2" that gives 20% discount</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.AddToCartSteps.user_logged_in_to_his_account_with_username_something_and_password_something(java.lang.String,java.lang.String)">
+                <span>Given user logged in to his account with username "mof16@test.com" and password "12341234"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AddToCartSteps.user_could_select_a_new_product_simple_computer()">
+                <span>When user select a new product: simple computer</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AddToCartSteps.add_it_to_cart()">
+                <span>And add it to cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.DiscountCodSteps.user_go_to_shopping_cart()">
+                <span>When user go to shopping cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.DiscountCodSteps.give_the_discount_code(java.lang.String)">
+                <span>And give the discount code "AutomationDiscount2"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.DiscountCodSteps.user_could_see_a_confirmation_message_contains_something(java.lang.String)">
+                <span>Then user could see a confirmation message contains: "discount"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.DiscountCodSteps.the_discount_is_20()">
+                <span>And the discount is 20%</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.RegistrationStep.user_log_out()">
+                <span>And user log out</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="121"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verify that “Terms of service” is mandatory</p>
+            <p class="text-sm">
+              <span>1:02:49 AM</span> / <span>00:00:05:894</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verify that “Terms of service” is mandatory</h5>
+<span class='badge badge-success'>08.20.2024 1:02:49 AM</span>
+<span class='badge badge-danger'>08.20.2024 1:02:55 AM</span>
+<span class='badge badge-default'>00:00:05:894</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=121</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="122"><span class="badge log pass-bg mr-2">Pass</span>verify that user could not check out a product with out agreeing to the terms of service</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.AddToCartSteps.user_logged_in_to_his_account_with_username_something_and_password_something(java.lang.String,java.lang.String)">
+                <span>Given user logged in to his account with username "Mof16@test.com" and password "12341234"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.DiscountCodSteps.user_go_to_shopping_cart()">
+                <span>And user go to shopping cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.TermsOfServiceVerificationSteps.user_try_to_check_out_the_product()">
+                <span>When user try to check out the product</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.TermsOfServiceVerificationSteps.warning_box_will_appear_contains_something(java.lang.String)">
+                <span>Then warning box will appear contains: "Please accept the terms of service before the next step"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.RegistrationStep.user_log_out()">
+                <span>And user log out</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="135"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verification that user could not proceed checking out without filling the mandatory data in the billing address</p>
+            <p class="text-sm">
+              <span>1:02:51 AM</span> / <span>00:00:24:895</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">verification that user could not proceed checking out without filling the mandatory data in the billing address</h5>
+<span class='badge badge-success'>08.20.2024 1:02:51 AM</span>
+<span class='badge badge-danger'>08.20.2024 1:03:16 AM</span>
+<span class='badge badge-default'>00:00:24:895</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=135</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="136"><span class="badge log fail-bg mr-2">Fail</span>verify that error message will appear that country must be selected to proceed</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.AddToCartSteps.user_logged_in_to_his_account_with_username_something_and_password_something(java.lang.String,java.lang.String)">
+                <span>Given user logged in to his account with username "mof16@test.com" and password "12341234"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.DiscountCodSteps.user_go_to_shopping_cart()">
+                <span>When user go to shopping cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BillingAdressVerificationsteps.agree_the_terms_of_service()">
+                <span>And agree the terms of service</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BillingAdressVerificationsteps.click_on_check_out()">
+                <span>And click on check out</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BillingAdressVerificationsteps.user_click_on_continue_without_selecting_a_country()">
+                <span>When user click on continue without selecting a country</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="stepDefinitions.BillingAdressVerificationsteps.error_message_will_appear_that_something(java.lang.String)">
+                <span>Then error message will appear that: "Country is required."</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at stepDefinitions.BillingAdressVerificationsteps.error_message_will_appear_that_something(BillingAdressVerificationsteps.java:45)
+	at ✽.error message will appear that: "Country is required."(file:///D:/pro/projects/TricentisWebShopAutomation/src/test/java/features/F06_BillingAdress.feature:18)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="153"><span class="badge log fail-bg mr-2">Fail</span>verify that error message will appear that city must be filled out</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.AddToCartSteps.user_logged_in_to_his_account_with_username_something_and_password_something(java.lang.String,java.lang.String)">
+                <span>Given user logged in to his account with username "mof16@test.com" and password "12341234"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.DiscountCodSteps.user_go_to_shopping_cart()">
+                <span>When user go to shopping cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BillingAdressVerificationsteps.agree_the_terms_of_service()">
+                <span>And agree the terms of service</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BillingAdressVerificationsteps.click_on_check_out()">
+                <span>And click on check out</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="stepDefinitions.BillingAdressVerificationsteps.user_select_a_country_something_and_click_on_continue(java.lang.String)">
+                <span>When user select country "Egypt" and click on continue</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.JavascriptException: javascript error: {"status":11,"value":"Element is not currently visible and may not be manipulated"}
+  (Session info: chrome=127.0.6533.100)
+Build info: version: '4.23.1', revision: '656257d8e9'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [370587f99f4d99b8c422acdd3e90e12a, clickElement {id=f.070111C76B29C3F6F10B8E0FC62D3754.d.DE025A4C409B8F8D2EE7342A10A0620B.e.190}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.100, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Users\Mofid\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60895}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60895/devtoo..., se:cdpVersion: 127.0.6533.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[[[ChromeDriver: chrome on windows (370587f99f4d99b8c422acdd3e90e12a)] -> id: BillingNewAddress_CountryId]] -> xpath: .//option[normalize-space(.) = "Egypt"]]
+Session ID: 370587f99f4d99b8c422acdd3e90e12a
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:315)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:119)
+	at pages.CheckoutPage.selectCountry(CheckoutPage.java:74)
+	at stepDefinitions.BillingAdressVerificationsteps.user_select_a_country_something_and_click_on_continue(BillingAdressVerificationsteps.java:52)
+	at ✽.user select country "Egypt" and click on continue(file:///D:/pro/projects/TricentisWebShopAutomation/src/test/java/features/F06_BillingAdress.feature:23)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.BillingAdressVerificationsteps.error_message_will_appear_that_something(java.lang.String)">
+                <span>Then error message will appear that: "City is required"</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="177"><span class="badge log fail-bg mr-2">Fail</span>verify that error message will appear that street addres is required</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.AddToCartSteps.user_logged_in_to_his_account_with_username_something_and_password_something(java.lang.String,java.lang.String)">
+                <span>Given user logged in to his account with username "mof16@test.com" and password "12341234"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.DiscountCodSteps.user_go_to_shopping_cart()">
+                <span>When user go to shopping cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BillingAdressVerificationsteps.agree_the_terms_of_service()">
+                <span>And agree the terms of service</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BillingAdressVerificationsteps.click_on_check_out()">
+                <span>And click on check out</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="stepDefinitions.BillingAdressVerificationsteps.user_select_country_and_fill_the_city_as_follows(io.cucumber.datatable.DataTable)">
+                <span>When user select Country and fill the City as follows</span>
+      <div><table class='markup-table table '><tr><td>Country</td><td>City</td></tr><tr><td>Egypt</td><td>Cairo</td></tr></table>
+      </div>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.JavascriptException: javascript error: {"status":11,"value":"Element is not currently visible and may not be manipulated"}
+  (Session info: chrome=127.0.6533.100)
+Build info: version: '4.23.1', revision: '656257d8e9'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3f9f24ae1a7b79099d3189e4c980d42f, clickElement {id=f.3FA7090B000911E473964773DE703B34.d.6B228669197E45EC954533DA0548CED0.e.200}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.100, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Users\Mofid\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60918}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60918/devtoo..., se:cdpVersion: 127.0.6533.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[[[ChromeDriver: chrome on windows (3f9f24ae1a7b79099d3189e4c980d42f)] -> id: BillingNewAddress_CountryId]] -> xpath: .//option[normalize-space(.) = "Egypt"]]
+Session ID: 3f9f24ae1a7b79099d3189e4c980d42f
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:315)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:119)
+	at pages.CheckoutPage.selectCountry(CheckoutPage.java:74)
+	at stepDefinitions.BillingAdressVerificationsteps.user_select_country_and_fill_the_city_as_follows(BillingAdressVerificationsteps.java:60)
+	at ✽.user select Country and fill the City as follows(file:///D:/pro/projects/TricentisWebShopAutomation/src/test/java/features/F06_BillingAdress.feature:29)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.BillingAdressVerificationsteps.error_message_will_appear_that_something(java.lang.String)">
+                <span>Then error message will appear that: "Street address is required"</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="195"><span class="badge log fail-bg mr-2">Fail</span>verify that error message will appear that postal code is required</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.AddToCartSteps.user_logged_in_to_his_account_with_username_something_and_password_something(java.lang.String,java.lang.String)">
+                <span>Given user logged in to his account with username "mof16@test.com" and password "12341234"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.DiscountCodSteps.user_go_to_shopping_cart()">
+                <span>When user go to shopping cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BillingAdressVerificationsteps.agree_the_terms_of_service()">
+                <span>And agree the terms of service</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BillingAdressVerificationsteps.click_on_check_out()">
+                <span>And click on check out</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="stepDefinitions.BillingAdressVerificationsteps.user_fill_the_address_something_and_click_continue(io.cucumber.datatable.DataTable)">
+                <span>When user fill the address as follows and click continue</span>
+      <div><table class='markup-table table '><tr><td>Country</td><td>City</td><td>Street</td></tr><tr><td>Egypt</td><td>Cairo</td><td>Test st.</td></tr></table>
+      </div>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.JavascriptException: javascript error: {"status":11,"value":"Element is not currently visible and may not be manipulated"}
+  (Session info: chrome=127.0.6533.100)
+Build info: version: '4.23.1', revision: '656257d8e9'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4e492459f1088b63c0de845fc23a8dc5, clickElement {id=f.653317CDEB70BC0EAA45E18BECE17CAD.d.E01077E60728CA445D66D343D85C7516.e.211}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.100, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Users\Mofid\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60939}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60939/devtoo..., se:cdpVersion: 127.0.6533.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[[[ChromeDriver: chrome on windows (4e492459f1088b63c0de845fc23a8dc5)] -> id: BillingNewAddress_CountryId]] -> xpath: .//option[normalize-space(.) = "Egypt"]]
+Session ID: 4e492459f1088b63c0de845fc23a8dc5
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:315)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:119)
+	at pages.CheckoutPage.selectCountry(CheckoutPage.java:74)
+	at stepDefinitions.BillingAdressVerificationsteps.user_fill_the_address_something_and_click_continue(BillingAdressVerificationsteps.java:68)
+	at ✽.user fill the address as follows and click continue(file:///D:/pro/projects/TricentisWebShopAutomation/src/test/java/features/F06_BillingAdress.feature:37)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.BillingAdressVerificationsteps.error_message_will_appear_that_something(java.lang.String)">
+                <span>Then error message will appear that: "Zip / postal code is required"</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="198"><span class="badge log fail-bg mr-2">Fail</span>verify that error message will appear that phone is required</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.AddToCartSteps.user_logged_in_to_his_account_with_username_something_and_password_something(java.lang.String,java.lang.String)">
+                <span>Given user logged in to his account with username "mof16@test.com" and password "12341234"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.DiscountCodSteps.user_go_to_shopping_cart()">
+                <span>When user go to shopping cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BillingAdressVerificationsteps.agree_the_terms_of_service()">
+                <span>And agree the terms of service</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BillingAdressVerificationsteps.click_on_check_out()">
+                <span>And click on check out</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="stepDefinitions.BillingAdressVerificationsteps.user_fill_the_zip_code_something_and_click_on_continue(io.cucumber.datatable.DataTable)">
+                <span>When user fill the zip code and click on continue</span>
+      <div><table class='markup-table table '><tr><td>Country</td><td>City</td><td>Street</td><td>Zipcode</td></tr><tr><td>Egypt</td><td>Cairo</td><td>Test st.</td><td>12345</td></tr></table>
+      </div>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.JavascriptException: javascript error: {"status":11,"value":"Element is not currently visible and may not be manipulated"}
+  (Session info: chrome=127.0.6533.100)
+Build info: version: '4.23.1', revision: '656257d8e9'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f1720ec91f704d459d7859e08ebdd9c7, clickElement {id=f.44AABC663E6A1B9E4654D384EADE78BF.d.F7ADB43E4947CED3243FDE1FFABA3A74.e.189}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.100, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Users\Mofid\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60957}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60957/devtoo..., se:cdpVersion: 127.0.6533.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[[[ChromeDriver: chrome on windows (f1720ec91f704d459d7859e08ebdd9c7)] -> id: BillingNewAddress_CountryId]] -> xpath: .//option[normalize-space(.) = "Egypt"]]
+Session ID: f1720ec91f704d459d7859e08ebdd9c7
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:315)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:119)
+	at pages.CheckoutPage.selectCountry(CheckoutPage.java:74)
+	at stepDefinitions.BillingAdressVerificationsteps.user_fill_the_zip_code_something_and_click_on_continue(BillingAdressVerificationsteps.java:77)
+	at ✽.user fill the zip code and click on continue(file:///D:/pro/projects/TricentisWebShopAutomation/src/test/java/features/F06_BillingAdress.feature:45)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.BillingAdressVerificationsteps.error_message_will_appear_that_something(java.lang.String)">
+                <span>Then error message will appear that: "Phone is required"</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="221"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">E2E Order checkout</p>
+            <p class="text-sm">
+              <span>1:03:15 AM</span> / <span>00:00:03:715</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">E2E Order checkout</h5>
+<span class='badge badge-success'>08.20.2024 1:03:15 AM</span>
+<span class='badge badge-danger'>08.20.2024 1:03:19 AM</span>
+<span class='badge badge-default'>00:00:03:715</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=221</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="222"><span class="badge log fail-bg mr-2">Fail</span>End to end scenario: User could order a simple computer and check it out</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="stepDefinitions.AddToCartSteps.user_logged_in_to_his_account_with_username_something_and_password_something(java.lang.String,java.lang.String)">
+                <span>Given user logged in to his account with username "mof17@test.com" and password "12341234"</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: Login was not successful expected [mof16@test.com] but found [mof17@test.com]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at stepDefinitions.AddToCartSteps.user_logged_in_to_his_account_with_username_something_and_password_something(AddToCartSteps.java:43)
+	at ✽.user logged in to his account with username "mof17@test.com" and password "12341234"(file:///D:/pro/projects/TricentisWebShopAutomation/src/test/java/features/F07_E2EScenario.feature:8)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.user_could_select_a_new_product_simple_computer()">
+                <span>When user select a new product: simple computer</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.add_it_to_cart()">
+                <span>And add it to cart</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.confirmation_message_something_should_appear(java.lang.String)">
+                <span>And confirmation message: "The product has been added to your" should appear</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.DiscountCodSteps.user_go_to_shopping_cart()">
+                <span>And user go to shopping cart</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.DiscountCodSteps.give_the_discount_code(java.lang.String)">
+                <span>And give the discount code "AutomationDiscount2"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.DiscountCodSteps.user_could_see_a_confirmation_message_contains_something(java.lang.String)">
+                <span>And user could see a confirmation message contains: "discount"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.DiscountCodSteps.the_discount_is_20()">
+                <span>And the discount is 20%</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.BillingAdressVerificationsteps.agree_the_terms_of_service()">
+                <span>And agree the terms of service</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.BillingAdressVerificationsteps.click_on_check_out()">
+                <span>And click on check out</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.OrderCheckoutSteps.add_the_address_and_continue(io.cucumber.datatable.DataTable)">
+                <span>And add the address and continue</span>
+      <div><table class='markup-table table '><tr><td>Country</td><td>City</td><td>Street</td><td>PostalCode</td><td>Phone</td></tr><tr><td>Egypt</td><td>Cairo</td><td>Test St.</td><td>12345</td><td>+12340000</td></tr></table>
+      </div>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.OrderCheckoutSteps.continue_to_payment_method_and_enter_the_payment_information(io.cucumber.datatable.DataTable)">
+                <span>And continue to payment method and enter the payment information:</span>
+      <div><table class='markup-table table '><tr><td>Card Type</td><td>Visa</td></tr><tr><td>Holder Name</td><td>Barbara Gordon</td></tr><tr><td>Card Number</td><td>4485564059489345</td></tr><tr><td>Exp. Month</td><td>04</td></tr><tr><td>Exp. Year</td><td>2025</td></tr><tr><td>Card Code</td><td>123</td></tr></table>
+      </div>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.OrderCheckoutSteps.user_could_see_confirmation_message_something(java.lang.String)">
+                <span>Then user could see confirmation message: "Your order has been successfully processed!"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.RegistrationStep.user_log_out()">
+                <span>And user log out</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">3</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>4</span>
+</span>
+<p class="name">org.openqa.selenium.JavascriptException</p>
+<p class="duration text-sm">4 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.JavascriptException</h4>
+<span status="fail" class='badge log badge-danger'>4 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>01:03:01 AM</td>
+<td>
+<a href="#" class="linked" test-id='135' id='171'>When user select country "Egypt" and click on continue</a>
+<div class="">
+<span class="badge badge-default">verification that user could not proceed checking out without filling the mandatory data in the billing address.verify that error message will appear that city must be filled out.When user select country "Egypt" and click on continue</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>01:03:07 AM</td>
+<td>
+<a href="#" class="linked" test-id='135' id='187'>When user select Country and fill the City as follows</a>
+<div class="">
+<span class="badge badge-default">verification that user could not proceed checking out without filling the mandatory data in the billing address.verify that error message will appear that street addres is required.When user select Country and fill the City as follows</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>01:03:14 AM</td>
+<td>
+<a href="#" class="linked" test-id='135' id='211'>When user fill the address as follows and click continue</a>
+<div class="">
+<span class="badge badge-default">verification that user could not proceed checking out without filling the mandatory data in the billing address.verify that error message will appear that postal code is required.When user fill the address as follows and click continue</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>01:03:15 AM</td>
+<td>
+<a href="#" class="linked" test-id='135' id='225'>When user fill the zip code and click on continue</a>
+<div class="">
+<span class="badge badge-default">verification that user could not proceed checking out without filling the mandatory data in the billing address.verify that error message will appear that phone is required.When user fill the zip code and click on continue</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>01:02:57 AM</td>
+<td>
+<a href="#" class="linked" test-id='135' id='162'>Then error message will appear that: "Country is required."</a>
+<div class="">
+<span class="badge badge-default">verification that user could not proceed checking out without filling the mandatory data in the billing address.verify that error message will appear that country must be selected to proceed.Then error message will appear that: "Country is required."</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>01:03:17 AM</td>
+<td>
+<a href="#" class="linked" test-id='221' id='230'>Given user logged in to his account with username "mof17@test.com" and password "12341234"</a>
+<div class="">
+<span class="badge badge-default">E2E Order checkout.End to end scenario: User could order a simple computer and check it out.Given user logged in to his account with username "mof17@test.com" and password "12341234"</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>3</span>
+</span>
+<p class="name">org.openqa.selenium.NoSuchElementException</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.NoSuchElementException</h4>
+<span status="fail" class='badge log badge-danger'>3 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>01:02:14 AM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='15'>And confirmation message should appear</a>
+<div class="">
+<span class="badge badge-default">Registering customers.Registering 3 new customers with valid email.And confirmation message should appear</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>01:02:15 AM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='22'>And confirmation message should appear</a>
+<div class="">
+<span class="badge badge-default">Registering customers.Registering 3 new customers with valid email.And confirmation message should appear</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>01:02:29 AM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='43'>And confirmation message should appear</a>
+<div class="">
+<span class="badge badge-default">Registering customers.Registering 3 new customers with valid email.And confirmation message should appear</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">4</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+<span class='badge log badge-danger'>4</span>
+</span>
+<p class="name">@Smoke</p>
+<p class="duration text-sm">6 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Smoke</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+<span status="fail" class='badge log badge-danger'>4 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>01:02:09 AM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='5'>Registering 3 new customers with valid email</a>
+<div class="">
+<span class="badge badge-default">Registering customers.Registering 3 new customers with valid email</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>01:02:09 AM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='6'>Registering 3 new customers with valid email</a>
+<div class="">
+<span class="badge badge-default">Registering customers.Registering 3 new customers with valid email</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>01:02:26 AM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='29'>Registering 3 new customers with valid email</a>
+<div class="">
+<span class="badge badge-default">Registering customers.Registering 3 new customers with valid email</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>01:02:31 AM</td>
+<td>
+<a href="#" class="linked" test-id='54' id='55'>user could sign in with valid data</a>
+<div class="">
+<span class="badge badge-default">testing logging in feature.user could sign in with valid data</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>01:02:42 AM</td>
+<td>
+<a href="#" class="linked" test-id='91' id='92'>After logging in user could add product to cart</a>
+<div class="">
+<span class="badge badge-default">Adding new product to cart.After logging in user could add product to cart</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>01:03:15 AM</td>
+<td>
+<a href="#" class="linked" test-id='221' id='222'>End to end scenario: User could order a simple computer and check it out</a>
+<div class="">
+<span class="badge badge-default">E2E Order checkout.End to end scenario: User could order a simple computer and check it out</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>5</span>
+<span class='badge log badge-danger'>5</span>
+</span>
+<p class="name">@Regression</p>
+<p class="duration text-sm">10 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Regression</h4>
+<span status="pass" class='badge log pass-bg'>5 passed</span>
+<span status="fail" class='badge log badge-danger'>5 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>01:02:28 AM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='40'>an already registered user try to register with same data</a>
+<div class="">
+<span class="badge badge-default">Registering customers.an already registered user try to register with same data</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>01:02:35 AM</td>
+<td>
+<a href="#" class="linked" test-id='54' id='67'>user try to log in with a valid email and invalid password</a>
+<div class="">
+<span class="badge badge-default">testing logging in feature.user try to log in with a valid email and invalid password</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>01:02:38 AM</td>
+<td>
+<a href="#" class="linked" test-id='54' id='79'>user try to log in with an invalid username</a>
+<div class="">
+<span class="badge badge-default">testing logging in feature.user try to log in with an invalid username</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>01:02:42 AM</td>
+<td>
+<a href="#" class="linked" test-id='99' id='100'>user could add discount code "AutomationDiscount2" that gives 20% discount</a>
+<div class="">
+<span class="badge badge-default">Adding discount code.user could add discount code "AutomationDiscount2" that gives 20% discount</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>01:02:49 AM</td>
+<td>
+<a href="#" class="linked" test-id='121' id='122'>verify that user could not check out a product with out agreeing to the terms of service</a>
+<div class="">
+<span class="badge badge-default">verify that “Terms of service” is mandatory.verify that user could not check out a product with out agreeing to the terms of service</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>01:02:51 AM</td>
+<td>
+<a href="#" class="linked" test-id='135' id='136'>verify that error message will appear that country must be selected to proceed</a>
+<div class="">
+<span class="badge badge-default">verification that user could not proceed checking out without filling the mandatory data in the billing address.verify that error message will appear that country must be selected to proceed</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>01:02:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='135' id='153'>verify that error message will appear that city must be filled out</a>
+<div class="">
+<span class="badge badge-default">verification that user could not proceed checking out without filling the mandatory data in the billing address.verify that error message will appear that city must be filled out</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>01:03:02 AM</td>
+<td>
+<a href="#" class="linked" test-id='135' id='177'>verify that error message will appear that street addres is required</a>
+<div class="">
+<span class="badge badge-default">verification that user could not proceed checking out without filling the mandatory data in the billing address.verify that error message will appear that street addres is required</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>01:03:08 AM</td>
+<td>
+<a href="#" class="linked" test-id='135' id='195'>verify that error message will appear that postal code is required</a>
+<div class="">
+<span class="badge badge-default">verification that user could not proceed checking out without filling the mandatory data in the billing address.verify that error message will appear that postal code is required</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>01:03:09 AM</td>
+<td>
+<a href="#" class="linked" test-id='135' id='198'>verify that error message will appear that phone is required</a>
+<div class="">
+<span class="badge badge-default">verification that user could not proceed checking out without filling the mandatory data in the billing address.verify that error message will appear that phone is required</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>3</span>
+</span>
+<p class="name">@OneTime</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@OneTime</h4>
+<span status="pass" class='badge log pass-bg'>3 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>01:02:31 AM</td>
+<td>
+<a href="#" class="linked" test-id='54' id='55'>user could sign in with valid data</a>
+<div class="">
+<span class="badge badge-default">testing logging in feature.user could sign in with valid data</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>01:02:35 AM</td>
+<td>
+<a href="#" class="linked" test-id='54' id='67'>user try to log in with a valid email and invalid password</a>
+<div class="">
+<span class="badge badge-default">testing logging in feature.user try to log in with a valid email and invalid password</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>01:02:38 AM</td>
+<td>
+<a href="#" class="linked" test-id='54' id='79'>user try to log in with an invalid username</a>
+<div class="">
+<span class="badge badge-default">testing logging in feature.user try to log in with an invalid username</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@E2E</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@E2E</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>01:03:15 AM</td>
+<td>
+<a href="#" class="linked" test-id='221' id='222'>End to end scenario: User could order a simple computer and check it out</a>
+<div class="">
+<span class="badge badge-default">E2E Order checkout.End to end scenario: User could order a simple computer and check it out</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Aug 20, 2024 01:02:08 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Aug 20, 2024 01:03:20 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>4</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>3</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='57%'>
+<b>4</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='42%'><b>3</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='43%'><b>7</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='56%'><b>9</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='68%'><b>64</b> steps passed</small></div>
+<div>
+<small data-tooltip='9%'><b>9</b> steps failed,
+<b>20</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Registering customers":32.122,"testing logging in feature":10.639,"Adding new product to cart":7.045,"Adding discount code":8.562,"verify that “Terms of service” is mandatory":5.894,"verification that user could not proceed checking out without filling the mandatory data in the billing address":24.895,"E2E Order checkout":3.715
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@Smoke</td>
+<td>2</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>33.333%</td>
+</tr>
+<tr>
+<td>@Regression</td>
+<td>5</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>@OneTime</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@E2E</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 4,
+failParent: 3,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 7,
+failChild: 9,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 64,
+failGrandChild: 9,
+warningGrandChild: 0,
+skipGrandChild: 20,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

@@ -24,7 +24,21 @@ public class RegisterPage {
 	}
 
 	// Methods
-	public WebElement getGenderRadioBtn(String gender) {
+
+	public void register(String firstname, String lastname, String email, String password, String confirmPassword) {
+		getFirstNameField().sendKeys(firstname);
+		getLastNameField().sendKeys(lastname);
+		getEmailField().sendKeys(email);
+		getPasswordField().sendKeys(password);
+		getConfirmPasswordField().sendKeys(password);
+
+	}
+
+	public void clickRegisterBtn() {
+		 driver.findElement(registerBtn).click();
+	}
+
+	public WebElement enterGender(String gender) {
 		if (gender.equalsIgnoreCase("male")) {
 			return driver.findElement(genderMaleRadioBtn);
 		}
@@ -51,10 +65,6 @@ public class RegisterPage {
 
 	public WebElement getConfirmPasswordField() {
 		return driver.findElement(confirmPasswordField);
-	}
-
-	public WebElement getRegisterBtn() {
-		return driver.findElement(registerBtn);
 	}
 
 }
