@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 		features = "src/test/java/features", 
 		glue = {"stepDefinitions", "base","utils"},
 		monochrome = true,
-	//	tags = "@E2E or @OneTime",
+		tags = "@OneTime",
 		plugin = { "pretty", "html:target/cucumber-reports/cucumber-pretty.html",
 				 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"rerun:target/cucumber-reports/rerun.txt" }
