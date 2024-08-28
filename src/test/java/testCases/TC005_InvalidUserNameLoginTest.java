@@ -1,15 +1,18 @@
 package testCases;
 
 import org.testng.annotations.Test;
-
-import base.Hooks;
 import org.testng.Assert;
 import pages.HomePage;
 import pages.LoginPage;
 import utils.ConfigLoader;
+import utils.Hooks;
+import utils.PageObjectManager;
 
 
 public class TC005_InvalidUserNameLoginTest extends Hooks{
+	PageObjectManager pageObjectManager = new PageObjectManager(getDriver());
+	HomePage homePage = pageObjectManager.getHomePage();
+	LoginPage loginPage = pageObjectManager.getLoginPage();
 	
 	private String email = "not" + ConfigLoader.getProperty("email");
 	private String password = ConfigLoader.getProperty("password");
@@ -17,10 +20,9 @@ public class TC005_InvalidUserNameLoginTest extends Hooks{
 	
 	@Test (groups = {"Regression"})
 	public void LoginWithValidUserNameAndInvalidPasswordTest() {
-		HomePage homePage = new HomePage(getDriver());
+	
 		homePage.getLoginBtn().click();
 		
-		LoginPage loginPage = new LoginPage(getDriver());
 		loginPage.getEmailField().sendKeys(email);
 		loginPage.getPasswordField().sendKeys(password);
 		loginPage.getLoginBtn().click();

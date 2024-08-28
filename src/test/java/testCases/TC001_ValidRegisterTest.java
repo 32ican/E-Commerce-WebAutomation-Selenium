@@ -3,13 +3,18 @@ package testCases;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import base.Hooks;
 import pages.HomePage;
 import pages.RegisterPage;
 import pages.RegisterResultPage;
 import utils.ConfigLoader;
+import utils.Hooks;
+import utils.PageObjectManager;
 
 public class TC001_ValidRegisterTest extends Hooks{
+	PageObjectManager pageObjectManager = new PageObjectManager(getDriver());
+	HomePage homePage = pageObjectManager.getHomePage();
+	RegisterPage registerPage = pageObjectManager.getRegisterPage();
+	RegisterResultPage registerResultPage = pageObjectManager.getRegisterResultPage();
 	
 	private String gender = ConfigLoader.getProperty("gender");
 	private String firstName = ConfigLoader.getProperty("firstName");
@@ -23,10 +28,9 @@ public class TC001_ValidRegisterTest extends Hooks{
 	@Test(groups = {"Smoke"})
 	public void registerNewCustomerTest() {
 		//test steps
-		HomePage homePage = new HomePage(getDriver());
+	
 		homePage.getRegisterBtn().click();
-		
-		RegisterPage registerPage = new RegisterPage(getDriver());
+
 		registerPage.getGenderRadioBtn(gender).click();
 		registerPage.getFirstNameField().sendKeys(firstName);
 		registerPage.getLastNameField().sendKeys(lastName);
@@ -36,7 +40,7 @@ public class TC001_ValidRegisterTest extends Hooks{
 		registerPage.getRegisterBtn().click();
 		
 		// Verification
-		RegisterResultPage registerResultPage = new RegisterResultPage(getDriver());
+		
 		actual = registerResultPage.getSuccessfulRegisterMsg().getText();
 		
 		Assert.assertEquals(actual, expected);

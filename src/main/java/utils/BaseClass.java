@@ -1,18 +1,12 @@
-package base;
+package utils;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Properties;
-
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-
-import utils.ConfigLoader;
-import utils.WebDriverFactory;
 import org.testng.annotations.Listeners;
 import org.apache.commons.io.FileUtils;
 
@@ -24,7 +18,7 @@ public class BaseClass {
 
 	// public WebDriver driver = getDriver();
 	public synchronized static WebDriver getDriver() {
-		return WebDriverFactory.getDriver();
+		return WebDriverManager.getDriver();
 	}
 
 

@@ -5,14 +5,18 @@ import java.util.List;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import base.Hooks;
 import pages.CartPage;
 import pages.CheckoutPage;
+import utils.Commands;
 import utils.ConfigLoader;
+import utils.Hooks;
+import utils.PageObjectManager;
 
 public class TC009_BillingAdressMandatoryTest extends Hooks {
-
+	PageObjectManager pageObjectManager = new PageObjectManager(getDriver());
+	
+	CheckoutPage checkout = pageObjectManager.getCheckoutPage();
+	
 	private String counrtyMsg = ConfigLoader.getProperty("contryMsg");
 	private String cityMsg = ConfigLoader.getProperty("cityMsg");
 	private String streetMsg = ConfigLoader.getProperty("streetMsg");
@@ -27,16 +31,15 @@ public class TC009_BillingAdressMandatoryTest extends Hooks {
 
 	@Test(groups = {"Regression"})
 	public void verifyMandatoryTermsOfServiceTest() {
-		
-		login(email, password);
-		addBookToCart();
-		applyCopun(discountCode);
+		Commands commands = new Commands();
+		commands.login(email, password);
+		commands.addBookToCart();
+		commands.applyCopun(discountCode);
 		
 		CartPage cart = new CartPage(getDriver());
 		cart.getAgreeBtn().click();
 		cart.getCheckoutBtn().click();
 
-		CheckoutPage checkout = new CheckoutPage(getDriver());
 		String checkoutTitle = checkout.getCheckoutTitle().getText();
 		Assert.assertTrue(checkoutTitle.toLowerCase().contains("checkout"));
 

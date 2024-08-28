@@ -2,25 +2,28 @@ package testCases;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import base.Hooks;
 import pages.CartPage;
+import utils.Commands;
 import utils.ConfigLoader;
+import utils.Hooks;
+import utils.PageObjectManager;
 
 public class TC007_DicountCodeTest extends Hooks {
 
+	PageObjectManager pageObjectManager = new PageObjectManager(getDriver());
+	CartPage cart = pageObjectManager.getCartPage();
+	
 	private String email = ConfigLoader.getProperty("email");
 	private String password = ConfigLoader.getProperty("password");
 	private String discountCode = ConfigLoader.getProperty("discountCode");
 
 	@Test(groups = { "Regression" })
 	public void addDiscountCodeTest() {
+		Commands commands = new Commands();
+		commands.login(email, password);
+		commands.addBookToCart();
+		commands.applyCopun(discountCode);
 
-		login(email, password);
-		addBookToCart();
-		applyCopun(discountCode);
-
-		CartPage cart = new CartPage(getDriver());
 		double subTotal;
 		double total;
 		double portion = .1;

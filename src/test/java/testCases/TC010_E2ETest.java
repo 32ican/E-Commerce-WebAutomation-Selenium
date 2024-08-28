@@ -7,18 +7,25 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-
-import base.Hooks;
 import org.testng.Assert;
 import pages.CartPage;
 import pages.CheckoutPage;
 import pages.ComputersPage;
 import pages.HomePage;
 import pages.ProductsPage;
+import utils.Commands;
 import utils.ConfigLoader;
 import utils.ExtentManager;
+import utils.Hooks;
+import utils.PageObjectManager;
 
 public class TC010_E2ETest extends Hooks {
+	PageObjectManager pageObjectManager  = new PageObjectManager(getDriver());
+	HomePage homePage = pageObjectManager.getHomePage();
+	ProductsPage product = pageObjectManager.getProductsPage();
+	CartPage cart = pageObjectManager.getCartPage();
+	ComputersPage computer = pageObjectManager.getComputersPage();
+	CheckoutPage checkout = pageObjectManager.getCheckoutPage();
 
 	private String email = ConfigLoader.getProperty("email");
 	private String password = ConfigLoader.getProperty("password");
@@ -39,18 +46,16 @@ public class TC010_E2ETest extends Hooks {
 
 	@Test(groups = {"Smoke"})
 	public void E2ETest() {
-
-		login(email, password);
+		Commands commands = new Commands();
+		commands.login(email, password);
 
 		ExtentManager.log("adding item to the shopping cart.....");
 
-		ComputersPage computer = new ComputersPage(getDriver());
 		computer.getComputers().click();
 		computer.getDesktops().click();
 		computer.getSimpleComputer().click();
 		computer.getProcessorRadioBtn().click();
 
-		ProductsPage product = new ProductsPage(getDriver());
 		product.getAddSimpleComputerToCartBtn().click();
 
 		// wait until item added to cart
@@ -63,10 +68,8 @@ public class TC010_E2ETest extends Hooks {
 
 		ExtentManager.log("Navigating to the shopping cart.....");
 
-		HomePage homePage = new HomePage(getDriver());
 		homePage.getCartLink().click();
 
-		CartPage cart = new CartPage(getDriver());
 		cart.getQuantity().clear();
 		cart.getQuantity().sendKeys("1");
 		cart.getQuantity().sendKeys(Keys.ENTER);
@@ -94,7 +97,6 @@ public class TC010_E2ETest extends Hooks {
 		cart.getAgreeBtn().click();
 		cart.getCheckoutBtn().click();
 
-		CheckoutPage checkout = new CheckoutPage(getDriver());
 		String checkoutTitle = checkout.getCheckoutTitle().getText();
 		Assert.assertTrue(checkoutTitle.toLowerCase().contains("checkout"));
 
